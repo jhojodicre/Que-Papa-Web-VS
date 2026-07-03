@@ -785,7 +785,7 @@ p {
 .offers-grid article,
 .why-grid article,
 .steps-grid article,
-.testimonials-grid blockquote,
+.testimonials-track blockquote,
 .catalog-card,
 .indicator-grid article,
 .hours-grid article,
@@ -950,8 +950,7 @@ p {
 
 .hours-grid,
 .payments-grid,
-.steps-grid,
-.testimonials-grid {
+.steps-grid {
   display: grid;
   gap: 12px;
 }
@@ -1136,13 +1135,11 @@ p {
   font-size: 0.84rem;
 }
 
-.steps-grid,
-.testimonials-grid {
+.steps-grid {
   grid-template-columns: repeat(3, 1fr);
 }
 
-.steps-grid article,
-.testimonials-grid blockquote {
+.steps-grid article {
   padding: 18px;
 }
 
@@ -2140,23 +2137,108 @@ p {
   text-shadow: none;
 }
 
-.testimonials-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+/* ── Testimonials Carousel ── */
+.testimonials-carousel {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
 }
 
-.testimonials-grid blockquote {
-  padding: 20px;
+.testimonials-track {
+  display: flex;
+  gap: 14px;
+  width: max-content;
+  animation: testimonials-scroll 50s linear infinite;
+}
+
+.testimonials-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes testimonials-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.testimonials-track blockquote {
+  flex: 0 0 260px;
+  padding: 16px 18px;
   font-style: italic;
+  font-size: 0.88rem;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 5px;
 }
 
-.testimonials-grid blockquote footer {
-  margin-top: 10px;
-  font-size: 0.88rem;
+.testimonials-track blockquote footer {
+  margin-top: 8px;
+  font-size: 0.82rem;
   color: var(--text-soft);
   font-style: normal;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .testimonials-track { animation: none; }
+}
+
+/* ── Comment Form ── */
+.comment-form-wrapper {
+  margin-top: 36px;
+  padding: 26px;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbf7 100%);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+
+.comment-form-wrapper h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: var(--text);
+}
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.comment-form__row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+}
+
+.comment-form input,
+.comment-form select,
+.comment-form textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 0.93rem;
+  background: #fff;
+  color: var(--text);
+  outline: none;
+  transition: border-color 160ms;
+  box-sizing: border-box;
+}
+
+.comment-form input:focus,
+.comment-form select:focus,
+.comment-form textarea:focus {
+  border-color: var(--green);
+}
+
+.comment-form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.comment-form .btn {
+  align-self: flex-end;
 }
 
 .sabados__note {
@@ -2453,8 +2535,7 @@ p {
   .hours-grid,
   .hours-row,
   .sabados-grid,
-  .steps-grid,
-  .testimonials-grid {
+  .steps-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -2493,7 +2574,6 @@ p {
   .hours-row,
   .payments-grid,
   .steps-grid,
-  .testimonials-grid,
   .why-grid {
     grid-template-columns: 1fr;
   }

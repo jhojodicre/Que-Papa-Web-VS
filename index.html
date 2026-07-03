@@ -301,37 +301,88 @@
           <p class="tag">Resenas</p>
           <h2>Lo que dicen nuestros clientes</h2>
         </div>
-        <div class="testimonials-grid">
-          <blockquote>
-            <p class="stars">★★★★★</p>
-            <p>"Siempre fruta y verdura espectacular. Los lunes voy si o si por lo nuevo."</p>
-            <footer><strong>Maria G.</strong> · Frescura</footer>
-          </blockquote>
-          <blockquote>
-            <p class="stars">★★★★★</p>
-            <p>"Trato amable y precios muy justos. Da gusto ir a comprar."</p>
-            <footer><strong>Carlos D.</strong> · Atencion</footer>
-          </blockquote>
-          <blockquote>
-            <p class="stars">★★★★★</p>
-            <p>"La feria de los sabados es imperdible, calidad y descuentos reales."</p>
-            <footer><strong>Laura P.</strong> · Calidad</footer>
-          </blockquote>
-          <blockquote>
-            <p class="stars">★★★★★</p>
-            <p>"Pedido por WhatsApp y entrega rapidisima. Una maravilla."</p>
-            <footer><strong>Andres R.</strong> · Rapidez</footer>
-          </blockquote>
-          <blockquote>
-            <p class="stars">★★★★★</p>
-            <p>"Verduras siempre frescas y bien presentadas. Recomiendo cien por ciento."</p>
-            <footer><strong>Sofia M.</strong> · Confianza</footer>
-          </blockquote>
-          <blockquote>
-            <p class="stars">★★★★★</p>
-            <p>"El ambiente del local es muy agradable, te asesoran con paciencia."</p>
-            <footer><strong>Diego F.</strong> · Ambiente</footer>
-          </blockquote>
+
+        <div class="testimonials-carousel" aria-label="Resenas de clientes">
+          <div class="testimonials-track">
+            <blockquote>
+              <p class="stars">★★★★★</p>
+              <p>"Siempre fruta y verdura espectacular. Los lunes voy si o si por lo nuevo."</p>
+              <footer><strong>Maria G.</strong> · Frescura</footer>
+            </blockquote>
+            <blockquote>
+              <p class="stars">★★★★★</p>
+              <p>"Trato amable y precios muy justos. Da gusto ir a comprar."</p>
+              <footer><strong>Carlos D.</strong> · Atencion</footer>
+            </blockquote>
+            <blockquote>
+              <p class="stars">★★★★★</p>
+              <p>"La feria de los sabados es imperdible, calidad y descuentos reales."</p>
+              <footer><strong>Laura P.</strong> · Calidad</footer>
+            </blockquote>
+            <blockquote>
+              <p class="stars">★★★★★</p>
+              <p>"Pedido por WhatsApp y entrega rapidisima. Una maravilla."</p>
+              <footer><strong>Andres R.</strong> · Rapidez</footer>
+            </blockquote>
+            <blockquote>
+              <p class="stars">★★★★★</p>
+              <p>"Verduras siempre frescas y bien presentadas. Recomiendo cien por ciento."</p>
+              <footer><strong>Sofia M.</strong> · Confianza</footer>
+            </blockquote>
+            <blockquote>
+              <p class="stars">★★★★★</p>
+              <p>"El ambiente del local es muy agradable, te asesoran con paciencia."</p>
+              <footer><strong>Diego F.</strong> · Ambiente</footer>
+            </blockquote>
+            <!-- Duplicado para loop infinito -->
+            <blockquote aria-hidden="true">
+              <p class="stars">★★★★★</p>
+              <p>"Siempre fruta y verdura espectacular. Los lunes voy si o si por lo nuevo."</p>
+              <footer><strong>Maria G.</strong> · Frescura</footer>
+            </blockquote>
+            <blockquote aria-hidden="true">
+              <p class="stars">★★★★★</p>
+              <p>"Trato amable y precios muy justos. Da gusto ir a comprar."</p>
+              <footer><strong>Carlos D.</strong> · Atencion</footer>
+            </blockquote>
+            <blockquote aria-hidden="true">
+              <p class="stars">★★★★★</p>
+              <p>"La feria de los sabados es imperdible, calidad y descuentos reales."</p>
+              <footer><strong>Laura P.</strong> · Calidad</footer>
+            </blockquote>
+            <blockquote aria-hidden="true">
+              <p class="stars">★★★★★</p>
+              <p>"Pedido por WhatsApp y entrega rapidisima. Una maravilla."</p>
+              <footer><strong>Andres R.</strong> · Rapidez</footer>
+            </blockquote>
+            <blockquote aria-hidden="true">
+              <p class="stars">★★★★★</p>
+              <p>"Verduras siempre frescas y bien presentadas. Recomiendo cien por ciento."</p>
+              <footer><strong>Sofia M.</strong> · Confianza</footer>
+            </blockquote>
+            <blockquote aria-hidden="true">
+              <p class="stars">★★★★★</p>
+              <p>"El ambiente del local es muy agradable, te asesoran con paciencia."</p>
+              <footer><strong>Diego F.</strong> · Ambiente</footer>
+            </blockquote>
+          </div>
+        </div>
+
+        <div class="comment-form-wrapper">
+          <h3>Deja tu comentario</h3>
+          <form name="comentarios" method="POST" data-netlify="true" class="comment-form">
+            <input type="hidden" name="form-name" value="comentarios" />
+            <div class="comment-form__row">
+              <input type="text" name="nombre" placeholder="Tu nombre" required autocomplete="name" />
+              <select name="calificacion">
+                <option value="★★★★★">★★★★★</option>
+                <option value="★★★★">★★★★</option>
+                <option value="★★★">★★★</option>
+              </select>
+            </div>
+            <textarea name="comentario" placeholder="Contanos tu experiencia..." rows="3" required></textarea>
+            <button type="submit" class="btn btn--primary">Enviar comentario</button>
+          </form>
         </div>
       </section>
 
