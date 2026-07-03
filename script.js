@@ -1,4 +1,4 @@
-const WHATSAPP_NUMBER = "59899999999";
+const WHATSAPP_NUMBER = "59892921712";
 const PAGE = document.body.dataset.page || "home";
 
 const products = [
@@ -10,8 +10,7 @@ const products = [
     unitLabel: "unidad",
     price: 35,
     offer: { label: "2 x $56", qty: 2, total: 56 },
-    image:
-      "https://images.unsplash.com/photo-1615477550927-b7b18f29db15?auto=format&fit=crop&w=900&q=80",
+    image: "img/ajo.jpeg",
     desc: "Ajo firme y aromatico para cocina diaria.",
     searchTerms: ["ajo"],
   },
@@ -22,8 +21,7 @@ const products = [
     unitType: "unit",
     unitLabel: "unidad",
     price: 70,
-    image:
-      "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=900&q=80",
+    image: "img/acelga.jpeg",
     desc: "Hojas frescas para salteados y tartas.",
     searchTerms: ["acelga"],
   },
@@ -36,8 +34,7 @@ const products = [
       { key: "unidad", label: "Unidad", price: 47, qty: 1 },
       { key: "atado", label: "Atado", price: 150, qty: 1 },
     ],
-    image:
-      "https://images.unsplash.com/photo-1615485737651-8f0f4f770300?auto=format&fit=crop&w=900&q=80",
+    image: "img/apio.jpeg",
     desc: "Crocante y fresco, ideal para jugos y sopas.",
     searchTerms: ["apio", "atado"],
   },
@@ -48,8 +45,7 @@ const products = [
     unitType: "kg",
     price: 69,
     offer: { label: "2 kg por $110", qtyKg: 2, total: 110 },
-    image:
-      "https://images.unsplash.com/photo-1603833665858-e61d17a86224?auto=format&fit=crop&w=900&q=80",
+    image: "img/banana.jpeg",
     desc: "Banana dulce y pareja, ideal para todos los dias.",
     searchTerms: ["banana", "platano"],
   },
@@ -59,8 +55,7 @@ const products = [
     category: "verduras",
     unitType: "kg",
     price: 88,
-    image:
-      "https://images.unsplash.com/photo-1596097635121-14b63b7a0c19?auto=format&fit=crop&w=900&q=80",
+    image: "img/boniato criollo.jpeg",
     desc: "Textura cremosa y sabor tradicional.",
     searchTerms: ["boniato", "criollo"],
   },
@@ -71,8 +66,7 @@ const products = [
     unitType: "kg",
     price: 123,
     offer: { label: "2 kg por $197", qtyKg: 2, total: 197 },
-    image:
-      "https://images.unsplash.com/photo-1518977956812-cd3dbadaaf31?auto=format&fit=crop&w=900&q=80",
+    image: "img/zapallo de zanahoria.jpeg",
     desc: "Color intenso y gran sabor.",
     searchTerms: ["boniato", "zanahoria"],
   },
@@ -82,8 +76,7 @@ const products = [
     category: "verduras",
     unitType: "kg",
     price: 66,
-    image:
-      "https://images.unsplash.com/photo-1518977676601-b53f82aba655?auto=format&fit=crop&w=900&q=80",
+    image: "img/cebolla.jpeg",
     desc: "Cebolla clasica para todo tipo de recetas.",
     searchTerms: ["cebolla"],
   },
@@ -94,8 +87,7 @@ const products = [
     unitType: "kg",
     price: 93,
     offer: { label: "2 kg por $149", qtyKg: 2, total: 149 },
-    image:
-      "https://images.unsplash.com/photo-1587049352851-8d4e89133924?auto=format&fit=crop&w=900&q=80",
+    image: "img/cebolla colorada.jpeg",
     desc: "Sabor suave para ensaladas y cocciones.",
     searchTerms: ["cebolla", "colorada"],
   },
@@ -108,8 +100,7 @@ const products = [
       { key: "unidad", label: "Unidad", price: 55, qty: 1 },
       { key: "atado-grande", label: "Atado grande", price: 100, qty: 1 },
     ],
-    image:
-      "https://images.unsplash.com/photo-1590165482129-1b8b27698780?auto=format&fit=crop&w=900&q=80",
+    image: "img/cebolla de verdeo.jpeg",
     desc: "Fresca y aromatica para salteados.",
     searchTerms: ["verdeo", "cebolla de verdeo", "atado"],
   },
@@ -120,8 +111,7 @@ const products = [
     unitType: "unit",
     unitLabel: "unidad",
     price: 63,
-    image:
-      "https://images.unsplash.com/photo-1551754655-cd27e38d2076?auto=format&fit=crop&w=900&q=80",
+    image: "img/choclo.jpeg",
     desc: "Choclo tierno para hervir o grillar.",
     searchTerms: ["choclo", "maiz"],
   },
@@ -131,8 +121,7 @@ const products = [
     category: "frutas",
     unitType: "kg",
     price: 263,
-    image:
-      "https://images.unsplash.com/photo-1610917047732-9f8ebbbe2536?auto=format&fit=crop&w=900&q=80",
+    image: "img/kiwi.jpeg",
     desc: "Sabor intenso, ideal para desayunos.",
     searchTerms: ["kiwi"],
   },
@@ -143,8 +132,7 @@ const products = [
     unitType: "unit",
     unitLabel: "unidad",
     price: 43,
-    image:
-      "https://images.unsplash.com/photo-1622205313162-be1d5712a43e?auto=format&fit=crop&w=900&q=80",
+    image: "img/lechuga.jpeg",
     desc: "Lechuga crocante y fresca.",
     searchTerms: ["lechuga"],
   },
@@ -154,8 +142,7 @@ const products = [
     category: "frutas",
     unitType: "kg",
     price: 82,
-    image:
-      "https://images.unsplash.com/photo-1590502593747-42a996133562?auto=format&fit=crop&w=900&q=80",
+    image: "img/limon.jpeg",
     desc: "Jugo natural para comidas y bebidas.",
     searchTerms: ["limon"],
   },
@@ -166,8 +153,7 @@ const products = [
     unitType: "kg",
     price: 69,
     offer: { label: "2 kg por $110", qtyKg: 2, total: 110 },
-    image:
-      "https://images.unsplash.com/photo-1611080626919-7cf5a9dbab5b?auto=format&fit=crop&w=900&q=80",
+    image: "img/mandarina.jpeg",
     desc: "Mandarina dulce y facil de pelar.",
     searchTerms: ["mandarina"],
   },
@@ -177,8 +163,7 @@ const products = [
     category: "frutas",
     unitType: "kg",
     price: 179,
-    image:
-      "https://images.unsplash.com/photo-1619546813926-a78fa6372cd2?auto=format&fit=crop&w=900&q=80",
+    image: "img/manzana red.jpeg",
     desc: "Crujiente y dulce, ideal para colaciones.",
     searchTerms: ["manzana", "red"],
   },
@@ -188,8 +173,7 @@ const products = [
     category: "frutas",
     unitType: "kg",
     price: 95,
-    image:
-      "https://images.unsplash.com/photo-1576179635662-9d1983e97e1a?auto=format&fit=crop&w=900&q=80",
+    image: "img/manzana royal.jpeg",
     desc: "Equilibrio perfecto entre dulzor y jugosidad.",
     searchTerms: ["manzana", "gala", "royal gala"],
   },
@@ -199,8 +183,7 @@ const products = [
     category: "frutas",
     unitType: "kg",
     price: 189,
-    image:
-      "https://images.unsplash.com/photo-1610397962076-02407a169a5b?auto=format&fit=crop&w=900&q=80",
+    image: "img/manzana granny.jpeg",
     desc: "Manzana verde, fresca y acida.",
     searchTerms: ["manzana", "granny", "smith"],
   },
@@ -210,8 +193,7 @@ const products = [
     category: "verduras",
     unitType: "kg",
     price: 246,
-    image:
-      "https://images.unsplash.com/photo-1563565375-f3fdfdbefa83?auto=format&fit=crop&w=900&q=80",
+    image: "img/morron rojo.jpeg",
     desc: "Color y sabor para tus comidas.",
     searchTerms: ["morron", "rojo"],
   },
@@ -221,8 +203,7 @@ const products = [
     category: "verduras",
     unitType: "kg",
     price: 218,
-    image:
-      "https://images.unsplash.com/photo-1459411552884-841db9b3cc2a?auto=format&fit=crop&w=900&q=80",
+    image: "img/morron verde.jpeg",
     desc: "Morron verde de excelente firmeza.",
     searchTerms: ["morron", "verde"],
   },
@@ -233,8 +214,7 @@ const products = [
     unitType: "kg",
     price: 49,
     offer: { label: "2 kg por $80", qtyKg: 2, total: 80 },
-    image:
-      "https://images.unsplash.com/photo-1582979512210-99b6a53386f9?auto=format&fit=crop&w=900&q=80",
+    image: "img/naranja.jpeg",
     desc: "Naranja jugosa para jugos y colaciones.",
     searchTerms: ["naranja"],
   },
@@ -246,8 +226,7 @@ const products = [
     unitLabel: "unidad",
     price: 49,
     offer: { label: "2 x $80", qty: 2, total: 80 },
-    image:
-      "https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?auto=format&fit=crop&w=900&q=80",
+    image: "img/palta.jpeg",
     desc: "Palta cremosa para ensaladas y tostadas.",
     searchTerms: ["palta"],
   },
@@ -258,8 +237,7 @@ const products = [
     unitType: "kg",
     price: 69,
     offer: { label: "2 kg por $110", qtyKg: 2, total: 110 },
-    image:
-      "https://images.unsplash.com/photo-1518977676601-b53f82aba655?auto=format&fit=crop&w=900&q=80",
+    image: "img/papa.jpeg",
     desc: "La mas pedida para todo tipo de comidas.",
     searchTerms: ["papa", "especial"],
   },
@@ -269,8 +247,7 @@ const products = [
     category: "frutas",
     unitType: "kg",
     price: 195,
-    image:
-      "https://images.unsplash.com/photo-1619546813926-a78fa6372cd2?auto=format&fit=crop&w=900&q=80",
+    image: "img/pera williams.jpeg",
     desc: "Pera dulce y fragante.",
     searchTerms: ["pera", "williams"],
   },
@@ -283,8 +260,7 @@ const products = [
       { key: "unidad", label: "Unidad", price: 55, qty: 1 },
       { key: "atado", label: "Atado", price: 150, qty: 1 },
     ],
-    image:
-      "https://images.unsplash.com/photo-1628773822503-930a7eaecf80?auto=format&fit=crop&w=900&q=80",
+    image: "img/perejil.jpeg",
     desc: "Aroma intenso para tus recetas.",
     searchTerms: ["perejil", "atado"],
   },
@@ -297,8 +273,7 @@ const products = [
       { key: "unidad", label: "Unidad", price: 55, qty: 1 },
       { key: "x6", label: "x6", price: 150, qty: 1 },
     ],
-    image:
-      "https://images.unsplash.com/photo-1530469912745-a215c6b256ea?auto=format&fit=crop&w=900&q=80",
+    image: "img/puerro.jpeg",
     desc: "Puerro fresco para sopas y salteados.",
     searchTerms: ["puerro", "x6"],
   },
@@ -310,8 +285,7 @@ const products = [
     fixedLabel: "6 unidades",
     fixedQty: 1,
     price: 155,
-    image:
-      "https://images.unsplash.com/photo-1528825871115-3581a5387919?auto=format&fit=crop&w=900&q=80",
+    image: "img/remolacha.jpeg",
     desc: "Pack de 6 unidades frescas.",
     searchTerms: ["remolacha"],
   },
@@ -322,8 +296,7 @@ const products = [
     unitType: "unit",
     unitLabel: "unidad",
     price: 144,
-    image:
-      "https://images.unsplash.com/photo-1598030343246-f1e8dd0d8ca8?auto=format&fit=crop&w=900&q=80",
+    image: "img/repollo.jpeg",
     desc: "Repollo firme y rendidor.",
     searchTerms: ["repollo", "blanco"],
   },
@@ -333,8 +306,7 @@ const products = [
     category: "verduras",
     unitType: "kg",
     price: 169,
-    image:
-      "https://images.unsplash.com/photo-1546470427-e5ac89d1f7b8?auto=format&fit=crop&w=900&q=80",
+    image: "img/tomate.jpeg",
     desc: "Tomate rojo, firme y sabroso.",
     searchTerms: ["tomate"],
   },
@@ -345,8 +317,7 @@ const products = [
     unitType: "kg",
     price: 65,
     offer: { label: "2 kg por $100", qtyKg: 2, total: 100 },
-    image:
-      "https://images.unsplash.com/photo-1447175008436-170170753d52?auto=format&fit=crop&w=900&q=80",
+    image: "img/zanahoria.jpeg",
     desc: "Zanahoria fresca para todo tipo de preparaciones.",
     searchTerms: ["zanahoria"],
   },
@@ -357,8 +328,7 @@ const products = [
     unitType: "kg",
     price: 130,
     offer: { label: "2 kg por $208", qtyKg: 2, total: 208 },
-    image:
-      "https://images.unsplash.com/photo-1566383444833-43d57e6fb1d4?auto=format&fit=crop&w=900&q=80",
+    image: "img/zapallitos.jpeg",
     desc: "Zapallitos tiernos y parejos.",
     searchTerms: ["zapallito", "zapallitos"],
   },
@@ -368,8 +338,7 @@ const products = [
     category: "verduras",
     unitType: "kg",
     price: 65,
-    image:
-      "https://images.unsplash.com/photo-1502741126161-b048400d85fe?auto=format&fit=crop&w=900&q=80",
+    image: "img/zapallo calabacin.jpeg",
     desc: "Ideal para pure y horno.",
     searchTerms: ["zapallo", "calabacin"],
   },
@@ -379,8 +348,7 @@ const products = [
     category: "verduras",
     unitType: "kg",
     price: 65,
-    image:
-      "https://images.unsplash.com/photo-1509551388413-e18d0ac5d495?auto=format&fit=crop&w=900&q=80",
+    image: "img/zapallo kabutia.jpeg",
     desc: "Dulce y cremoso para comidas de invierno.",
     searchTerms: ["zapallo", "kabutia"],
   },
@@ -393,8 +361,7 @@ const products = [
       { key: "docena", label: "Docena", price: 140, qty: 1 },
       { key: "maple", label: "Maple", price: 325, qty: 1 },
     ],
-    image:
-      "https://images.unsplash.com/photo-1506976785307-8732e854ad03?auto=format&fit=crop&w=900&q=80",
+    image: "img/huevo.jpeg",
     desc: "Huevos frescos en docena o maple.",
     searchTerms: ["huevos", "docena", "maple"],
   },
@@ -405,8 +372,7 @@ const products = [
     unitType: "pet",
     kgPrice: 65,
     bag: { label: "Bolsa 7 kg", kg: 7, total: 390 },
-    image:
-      "https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=900&q=80",
+    image: "img/tokyperro.jpeg",
     desc: "Alimento para perro por kilo o bolsa completa.",
     searchTerms: ["toky", "perro", "mascotas"],
   },
@@ -417,8 +383,7 @@ const products = [
     unitType: "pet",
     kgPrice: 85,
     bag: { label: "Bolsa 8 kg", kg: 8, total: 491 },
-    image:
-      "https://images.unsplash.com/photo-1525253086316-d0c936c814f8?auto=format&fit=crop&w=900&q=80",
+    image: "img/wits perro.jpeg",
     desc: "Nutricion balanceada para perro.",
     searchTerms: ["wits", "perro", "mascotas"],
   },
@@ -429,8 +394,7 @@ const products = [
     unitType: "pet",
     kgPrice: 130,
     bag: { label: "Bolsa 8 kg", kg: 8, total: 941 },
-    image:
-      "https://images.unsplash.com/photo-1519052537078-e6302a4968d4?auto=format&fit=crop&w=900&q=80",
+    image: "img/procat.jpeg",
     desc: "Alimento para gato por kilo o bolsa.",
     searchTerms: ["witts", "gato", "mascotas"],
   },
@@ -494,16 +458,23 @@ function productPriceLabel(product) {
   return `${formatMoney(product.price)}`;
 }
 
+function productPriceShort(product) {
+  if (product.unitType === "kg") return formatMoney(product.price);
+  if (product.unitType === "unit") return formatMoney(product.price);
+  if (product.unitType === "variant") return formatMoney(product.variants[0].price);
+  if (product.unitType === "pet") return formatMoney(product.kgPrice);
+  return formatMoney(product.price);
+}
+
 function buildChips() {
   if (!filterChips) return;
 
   const chips = [
-    { key: "todos", label: "Todos" },
-    { key: "verduras", label: "Verduras" },
-    { key: "frutas", label: "Frutas" },
-    { key: "huevos", label: "Huevos" },
-    { key: "mascotas", label: "Mascotas" },
-    { key: "ofertas", label: "Ofertas" },
+    { key: "todos",     label: "Todos" },
+    { key: "frutas",    label: "Frutas" },
+    { key: "verduras",  label: "Verduras" },
+    { key: "mascotas",  label: "Alimentos para mascotas" },
+    { key: "huevos",    label: "Huevos" },
   ];
 
   filterChips.innerHTML = chips
@@ -525,12 +496,8 @@ function buildChips() {
 function filteredProducts() {
   let list = [...products];
 
-  if (state.filter !== "todos") {
-    if (state.filter === "ofertas") {
-      list = list.filter((p) => p.offer);
-    } else {
-      list = list.filter((p) => p.category === state.filter);
-    }
+  if (state.filter && state.filter !== "todos") {
+    list = list.filter((p) => p.category === state.filter);
   }
 
   if (state.search.trim()) {
@@ -540,6 +507,8 @@ function filteredProducts() {
       return base.includes(term);
     });
   }
+
+  list.sort((a, b) => a.name.localeCompare(b.name, "es"));
 
   return list;
 }
@@ -559,9 +528,9 @@ function renderCatalog() {
           <img loading="lazy" src="${product.image}" alt="${product.name}" />
         </div>
         <h3>${product.name}</h3>
-        <p class="price">${productPriceLabel(product)}</p>
-        ${product.offer ? `<p class="meta">${product.offer.label}</p>` : '<p class="meta">Producto fresco</p>'}
-        <button class="btn btn--ghost" data-open="${product.id}">Ver producto</button>
+        <p class="price">${productPriceShort(product)}</p>
+        ${product.offer ? `<span class="offer-badge-card">OFERTA · ${product.offer.label}</span>` : '<p class="meta">Producto fresco</p>'}
+        <button class="btn btn--primary" data-open="${product.id}">Ver producto</button>
       </article>
     `
     )
@@ -598,7 +567,7 @@ function renderOffers() {
       if (PAGE === "catalogo") {
         openProduct(btn.dataset.open);
       } else {
-        window.location.href = `catalogo.html?producto=${encodeURIComponent(btn.dataset.open)}`;
+        window.location.href = "catalogo.html?filtro=ofertas#promociones-catalogo";
       }
     });
   });
@@ -695,100 +664,127 @@ function renderProductModal() {
   const product = state.selectedProduct;
   if (!product) return;
 
-  let controls = "";
+  let qtyBlock = "";
+  const total = calcTotal(product, state.selectedQty, state.selectedUseOffer, state.selectedVariantKey);
+
+  const isOffer = state.selectedUseOffer && !!product.offer;
+  const priceDisplay = productPriceLabel(product);
+  const priceClass = "";
+  const offerBadge = product.offer
+    ? `<span class="modal-offer-badge">${product.offer.label} — oferta</span>`
+    : "";
 
   if (product.unitType === "kg") {
-    controls = `
-      <div class="qty-panel">
-        <p><strong>Cantidad:</strong> ${state.selectedUseOffer ? `${product.offer.qtyKg} kg (oferta)` : `${state.selectedQty.toFixed(1)} kg`}</p>
-        <div class="qty-actions">
-          <button type="button" data-action="minus-100">-100 g</button>
-          <button type="button" data-action="plus-100">+100 g</button>
-          <button type="button" data-action="set-1kg">1 kg</button>
-          ${product.offer ? '<button type="button" data-action="set-offer">2 kg</button>' : ""}
+    const qtyVal = state.selectedUseOffer ? `${product.offer.qtyKg} kg` : `${state.selectedQty.toFixed(1)} kg`;
+    qtyBlock = `
+      <p class="modal-section-label">Elegi la cantidad</p>
+      <div class="modal-qty-control">
+        <button type="button" class="modal-qty-btn modal-qty-btn--minus" data-action="minus-100">−</button>
+        <div class="modal-qty-center">
+          <span class="modal-qty-unit">Cantidad</span>
+          <span class="modal-qty-display">${qtyVal}</span>
         </div>
+        <button type="button" class="modal-qty-btn modal-qty-btn--plus" data-action="plus-100">+</button>
       </div>
-    `;
+      <p class="modal-qty-hint">Cada toque suma o quita 100 g</p>
+      <div class="modal-presets">
+        <button type="button" data-action="set-half">½ kg</button>
+        <button type="button" data-action="set-1kg">1 kg</button>
+        ${product.offer ? `<button type="button" data-action="set-offer">2 kg ★</button>` : ""}
+      </div>`;
   }
 
   if (product.unitType === "unit") {
-    controls = `
-      <div class="qty-panel">
-        <p><strong>Cantidad:</strong> ${state.selectedUseOffer && product.offer ? `${product.offer.qty} unidades (oferta)` : `${state.selectedQty} unidad${state.selectedQty > 1 ? "es" : ""}`}</p>
-        <div class="qty-actions">
-          <button type="button" data-action="minus-unit">-</button>
-          <button type="button" data-action="plus-unit">+</button>
-          ${product.offer ? '<button type="button" data-action="set-offer">2x oferta</button>' : ""}
+    const qtyVal = state.selectedUseOffer && product.offer ? `${product.offer.qty}` : `${state.selectedQty}`;
+    qtyBlock = `
+      <p class="modal-section-label">Elegi la cantidad</p>
+      <div class="modal-qty-control">
+        <button type="button" class="modal-qty-btn modal-qty-btn--minus" data-action="minus-unit">−</button>
+        <div class="modal-qty-center">
+          <span class="modal-qty-unit">Cantidad</span>
+          <span class="modal-qty-display">${qtyVal}</span>
         </div>
+        <button type="button" class="modal-qty-btn modal-qty-btn--plus" data-action="plus-unit">+</button>
       </div>
-    `;
+      ${product.offer ? `<div class="modal-presets"><button type="button" data-action="set-offer">${product.offer.label} ★</button></div>` : ""}`;
   }
 
   if (product.unitType === "variant") {
-    controls = `
-      <div class="qty-panel">
-        <p><strong>Presentacion</strong></p>
-        <div class="qty-actions">
-          ${product.variants
-            .map(
-              (v) =>
-                `<button type="button" data-action="pick-variant" data-variant="${v.key}">${v.label} ${formatMoney(v.price)}</button>`
-            )
-            .join("")}
-        </div>
-        <p><strong>Cantidad:</strong> ${state.selectedQty}</p>
-        <div class="qty-actions">
-          <button type="button" data-action="minus-unit">-</button>
-          <button type="button" data-action="plus-unit">+</button>
-        </div>
+    qtyBlock = `
+      <p class="modal-section-label">Elegi la opcion</p>
+      <div class="modal-variants">
+        ${product.variants.map(v =>
+          `<button type="button" class="modal-variant-btn ${state.selectedVariantKey === v.key ? "is-active" : ""}" data-action="pick-variant" data-variant="${v.key}">
+            <span>${v.qty || 1} ${v.label}</span><span class="modal-variant-price">${formatMoney(v.price)}</span>
+          </button>`
+        ).join("")}
       </div>
-    `;
+      <p class="modal-section-label" style="margin-top:14px">Cantidad</p>
+      <div class="modal-qty-control">
+        <button type="button" class="modal-qty-btn modal-qty-btn--minus" data-action="minus-unit">−</button>
+        <div class="modal-qty-center"><span class="modal-qty-unit">Cantidad</span><span class="modal-qty-display">${state.selectedQty}</span></div>
+        <button type="button" class="modal-qty-btn modal-qty-btn--plus" data-action="plus-unit">+</button>
+      </div>`;
   }
 
   if (product.unitType === "fixedPack") {
-    controls = `
-      <div class="qty-panel">
-        <p><strong>Presentacion:</strong> ${product.fixedLabel}</p>
-        <p><strong>Cantidad:</strong> ${state.selectedQty}</p>
-        <div class="qty-actions">
-          <button type="button" data-action="minus-unit">-</button>
-          <button type="button" data-action="plus-unit">+</button>
-        </div>
-      </div>
-    `;
+    qtyBlock = `
+      <p class="modal-section-label">${product.fixedLabel}</p>
+      <div class="modal-qty-control">
+        <button type="button" class="modal-qty-btn modal-qty-btn--minus" data-action="minus-unit">−</button>
+        <div class="modal-qty-center"><span class="modal-qty-unit">Cantidad</span><span class="modal-qty-display">${state.selectedQty}</span></div>
+        <button type="button" class="modal-qty-btn modal-qty-btn--plus" data-action="plus-unit">+</button>
+      </div>`;
   }
 
   if (product.unitType === "pet") {
-    controls = `
-      <div class="qty-panel">
-        <p><strong>Presentacion</strong></p>
-        <div class="qty-actions">
-          <button type="button" data-action="pet-kg">1 kg</button>
-          <button type="button" data-action="pet-bag">${product.bag.label}</button>
-        </div>
-        <p><strong>Cantidad:</strong> ${state.selectedVariantKey === "bag" ? `${state.selectedQty} bolsa${state.selectedQty > 1 ? "s" : ""}` : `${state.selectedQty.toFixed(1)} kg`}</p>
-        <div class="qty-actions">
-          ${
-            state.selectedVariantKey === "bag"
-              ? '<button type="button" data-action="minus-unit">-</button><button type="button" data-action="plus-unit">+</button>'
-              : '<button type="button" data-action="minus-100">-100 g</button><button type="button" data-action="plus-100">+100 g</button><button type="button" data-action="set-1kg">1 kg</button>'
-          }
-        </div>
+    const isBag = state.selectedVariantKey === "bag";
+    const qtyVal = isBag ? `${state.selectedQty}` : `${state.selectedQty.toFixed(1)} kg`;
+    qtyBlock = `
+      <p class="modal-section-label">Presentacion</p>
+      <div class="modal-variants">
+        <button type="button" class="modal-variant-btn ${!isBag ? "is-active" : ""}" data-action="pet-kg">
+          <span>Por kilo</span><span class="modal-variant-price">${formatMoney(product.kgPrice)}/kg</span>
+        </button>
+        <button type="button" class="modal-variant-btn ${isBag ? "is-active" : ""}" data-action="pet-bag">
+          <span>${product.bag.label}</span><span class="modal-variant-price">${formatMoney(product.bag.total)}</span>
+        </button>
       </div>
-    `;
+      <p class="modal-section-label" style="margin-top:14px">Cantidad</p>
+      <div class="modal-qty-control">
+        <button type="button" class="modal-qty-btn modal-qty-btn--minus" data-action="${isBag ? "minus-unit" : "minus-100"}">−</button>
+        <div class="modal-qty-center"><span class="modal-qty-unit">Cantidad</span><span class="modal-qty-display">${qtyVal}</span></div>
+        <button type="button" class="modal-qty-btn modal-qty-btn--plus" data-action="${isBag ? "plus-unit" : "plus-100"}">+</button>
+      </div>`;
   }
 
-  const total = calcTotal(product, state.selectedQty, state.selectedUseOffer, state.selectedVariantKey);
-
   productModalContent.innerHTML = `
-    <img src="${product.image}" alt="${product.name}" />
-    <div>
-      <h3>${product.name}</h3>
-      <p>${product.desc}</p>
-      <p><strong>Precio:</strong> ${productPriceLabel(product)} ${product.offer ? `| ${product.offer.label}` : ""}</p>
-      ${controls}
-      <p><strong>Total:</strong> ${formatMoney(total)}</p>
-      <button class="btn btn--primary" type="button" id="addToCartBtn">Agregar al carrito</button>
+    <div class="modal-img-col">
+      <img src="${product.image}" alt="${product.name}" />
+    </div>
+    <div class="modal-detail">
+      <div class="modal-detail__scroll">
+        <span class="modal-category-tag">${product.category}</span>
+        <h2 class="modal-title">${product.name}</h2>
+        <p class="modal-desc">${product.desc}</p>
+        <div class="modal-price-box">
+          <p class="modal-price-label">Precio</p>
+          <div class="modal-price-row">
+            <span class="modal-price-value ${priceClass}">${priceDisplay}</span>
+            ${offerBadge}
+          </div>
+        </div>
+        ${qtyBlock}
+      </div>
+      <div class="modal-footer">
+        <div>
+          <p class="modal-subtotal__label">Subtotal</p>
+          <p class="modal-subtotal__value ${isOffer ? "modal-subtotal__value--offer" : ""}">${formatMoney(total)}</p>
+        </div>
+        <button class="modal-add-btn" type="button" id="addToCartBtn" ${total <= 0 ? "disabled" : ""}>
+          <i data-lucide="shopping-cart"></i> Agregar al carrito
+        </button>
+      </div>
     </div>
   `;
 
@@ -803,6 +799,10 @@ function renderProductModal() {
       if (action === "minus-100") {
         state.selectedUseOffer = false;
         state.selectedQty = Math.max(0, state.selectedQty - 0.1);
+      }
+      if (action === "set-half") {
+        state.selectedUseOffer = false;
+        state.selectedQty = 0.5;
       }
       if (action === "set-1kg") {
         state.selectedUseOffer = false;
@@ -881,33 +881,45 @@ function renderCart() {
   if (!cartItems || !cartTotal || !cartFabCount) return;
 
   if (state.cart.length === 0) {
-    cartItems.innerHTML = "<p>Tu carrito esta vacio.</p>";
+    cartItems.innerHTML = `
+      <div class="cart-empty">
+        <i data-lucide="shopping-basket"></i>
+        <p>Tu carrito esta vacio.</p>
+        <a class="btn btn--primary" href="catalogo.html">Ver catalogo</a>
+      </div>`;
+    if (window.lucide) window.lucide.createIcons();
   } else {
     cartItems.innerHTML = state.cart
       .map(
         (item) => `
       <article class="cart-item">
-        <img src="${item.image}" alt="${item.name}" />
-        <div>
-          <strong>${item.name}</strong>
-          <p>${item.label}</p>
-          <small>${formatMoney(item.total)}</small>
+        <div class="cart-item__img">
+          <img src="${item.image}" alt="${item.name}" />
         </div>
-        <div>
-          <button data-edit="${item.uid}">Editar</button>
-          <button data-delete="${item.uid}">Eliminar</button>
+        <div class="cart-item__body">
+          <div class="cart-item__top">
+            <strong>${item.name}</strong>
+            <button class="cart-item__del" data-delete="${item.uid}" aria-label="Eliminar">
+              <i data-lucide="trash-2"></i>
+            </button>
+          </div>
+          <p class="cart-item__label">${item.label}</p>
+          <p class="cart-item__price">${formatMoney(item.total)}</p>
         </div>
       </article>
     `
       )
       .join("");
+    if (window.lucide) window.lucide.createIcons();
   }
 
   const total = state.cart.reduce((sum, item) => sum + item.total, 0);
   cartTotal.textContent = formatMoney(total);
   cartFabCount.textContent = state.cart.length;
+  const cartHeaderCount = document.getElementById("cartHeaderCount");
+  if (cartHeaderCount) cartHeaderCount.textContent = state.cart.length;
 
-  cartItems.querySelectorAll("button[data-delete]").forEach((btn) => {
+  cartItems.querySelectorAll("button[data-delete],.cart-item__del[data-delete]").forEach((btn) => {
     btn.addEventListener("click", () => {
       state.cart = state.cart.filter((item) => item.uid !== btn.dataset.delete);
       renderCart();
@@ -950,7 +962,10 @@ function getWhatsappMessage(formData) {
     .map((item) => `• ${item.name} — ${item.label} — ${formatMoney(item.total)}`)
     .join("\n\n");
 
-  return `🛒 Nuevo pedido - Que Papa\n\n📦 Productos:\n\n${lines}\n\n💰 Total:\n${formatMoney(total)}\n\n👤 Cliente:\n${formData.name}\n\n📞 ${formData.phone}\n\n📍 ${formData.address}\n\n💳 Metodo de pago: ${formData.payment}\n\n📝 Observaciones: ${formData.notes || "Sin observaciones."}`;
+  const delivery = formData.delivery || "Entrega a Domicilio";
+  const address = delivery === "Entrega a Domicilio" ? `\n📍 Direccion: ${formData.address || "Sin indicar"}` : "\n🏪 Retira en el local";
+
+  return `🛒 Nuevo pedido - Que Papa\n\n📦 Productos:\n\n${lines}\n\n💰 Total:\n${formatMoney(total)}\n\n👤 Cliente:\n${formData.name}\n\n📞 ${formData.phone}\n\n📧 ${formData.email}${address}\n\n💳 Pago: ${formData.payment}\n\n---\nMuchas gracias por elegir Que Papa 🍎🥬\nDe la tierra a tu hogar.`;
 }
 
 function bindEvents() {
@@ -975,6 +990,8 @@ function bindEvents() {
   }
 
   if (cartFab) cartFab.addEventListener("click", openCart);
+  const cartHeaderBtn = document.getElementById("cartHeaderBtn");
+  if (cartHeaderBtn) cartHeaderBtn.addEventListener("click", openCart);
   if (closeCart) closeCart.addEventListener("click", closeCartPanel);
 
   if (clearCart) {
@@ -984,33 +1001,72 @@ function bindEvents() {
     });
   }
 
-  if (checkoutBtn && checkoutModal) {
+  // Checkout panel logic
+  const cartView = document.getElementById("cartView");
+  const checkoutView = document.getElementById("checkoutView");
+  const backToCart = document.getElementById("backToCart");
+  const backToCart2 = document.getElementById("backToCart2");
+  const closeCheckoutPanel = document.getElementById("closeCheckoutPanel");
+  const addressField = document.getElementById("addressField");
+  const checkoutTotal = document.getElementById("checkoutTotal");
+  const checkoutSubmitBtn = document.getElementById("checkoutSubmitBtn");
+
+  function showCheckout() {
+    if (cartView) cartView.classList.add("is-hidden");
+    if (checkoutView) checkoutView.classList.add("is-active");
+    if (checkoutTotal) {
+      const total = state.cart.reduce((sum, item) => sum + item.total, 0);
+      checkoutTotal.textContent = formatMoney(total);
+    }
+    if (window.lucide) window.lucide.createIcons();
+  }
+
+  function showCart() {
+    if (cartView) cartView.classList.remove("is-hidden");
+    if (checkoutView) checkoutView.classList.remove("is-active");
+  }
+
+  if (checkoutBtn) {
     checkoutBtn.addEventListener("click", () => {
       if (state.cart.length === 0) {
         showToast("Agrega productos antes de finalizar.");
         return;
       }
-      checkoutModal.showModal();
+      showCheckout();
     });
   }
 
-  if (closeCheckoutModal && checkoutModal) {
-    closeCheckoutModal.addEventListener("click", () => checkoutModal.close());
+  if (backToCart) backToCart.addEventListener("click", showCart);
+  if (backToCart2) backToCart2.addEventListener("click", showCart);
+  if (closeCheckoutPanel) closeCheckoutPanel.addEventListener("click", () => { closeCartPanel(); showCart(); });
+
+  // Show/hide address field based on delivery radio
+  document.querySelectorAll("input[name='delivery']").forEach((radio) => {
+    radio.addEventListener("change", () => {
+      if (addressField) {
+        addressField.style.display = radio.value === "Entrega a Domicilio" ? "" : "none";
+      }
+    });
+  });
+
+  // Submit via external button
+  if (checkoutSubmitBtn && checkoutForm) {
+    checkoutSubmitBtn.addEventListener("click", () => checkoutForm.requestSubmit());
   }
 
   if (checkoutForm) {
     checkoutForm.addEventListener("submit", (event) => {
       event.preventDefault();
       if (state.cart.length === 0) return;
-
       const formData = Object.fromEntries(new FormData(checkoutForm));
       const text = getWhatsappMessage(formData);
       const whatsappURL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
       window.open(whatsappURL, "_blank", "noopener,noreferrer");
-
-      if (checkoutModal) checkoutModal.close();
       closeCartPanel();
+      showCart();
       checkoutForm.reset();
+      state.cart = [];
+      renderCart();
     });
   }
 
@@ -1086,6 +1142,7 @@ function bindEvents() {
 function init() {
   renderOffers();
   buildChips();
+
   renderCatalog();
   renderCart();
   bindEvents();

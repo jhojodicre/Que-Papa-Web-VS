@@ -13,17 +13,19 @@
       content="verduleria, fruteria, pedidos por whatsapp, frutas frescas, verduras frescas, paso de los toros"
     />
     <meta name="robots" content="index,follow" />
-    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="logo.jpg" type="image/jpeg" />
+    <link rel="apple-touch-icon" href="logo.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700;800&family=Playfair+Display:wght@700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
     <script src="https://unpkg.com/lucide@latest"></script>
   </head>
   <body data-page="home">
+    <div id="top" aria-hidden="true"></div>
     <a class="skip-link" href="#ofertas">Saltar al contenido</a>
     <div class="bg-blob bg-blob--1" aria-hidden="true"></div>
     <div class="bg-blob bg-blob--2" aria-hidden="true"></div>
@@ -31,7 +33,7 @@
     <header class="header" id="inicio">
       <div class="header__inner">
         <a class="logo" href="#inicio" aria-label="Ir al inicio">
-          <span class="logo__mark">QP</span>
+          <img class="logo__img" src="logo.jpg" alt="Que Papa" />
           <span>
             <strong>Que Papa</strong>
             <small>De la tierra a tu hogar</small>
@@ -39,14 +41,18 @@
         </a>
 
         <nav class="nav" aria-label="Menu principal">
-          <a href="#inicio">Inicio</a>
-          <a href="#ofertas">Promociones</a>
-          <a href="#experiencia">Experiencia</a>
+          <a href="#top">Inicio</a>
+          <a href="catalogo.html">Catalogo</a>
+          <a href="#nosotros">Nosotros</a>
+          <a href="#horarios">Horarios</a>
           <a href="#contacto">Contacto</a>
         </nav>
 
         <div class="header__actions">
-          <a class="btn btn--primary" href="catalogo.html">Ver catalogo completo</a>
+          <a class="btn btn--ghost" href="catalogo.html">Catalogo</a>
+          <a class="btn btn--primary" href="catalogo.html">
+            <i data-lucide="shopping-cart"></i> Carrito
+          </a>
           <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-label="Abrir menu">
             <i data-lucide="menu"></i>
           </button>
@@ -56,9 +62,10 @@
 
     <aside class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
       <nav class="mobile-nav" aria-label="Menu movil">
-        <a href="#inicio">Inicio</a>
-        <a href="#ofertas">Promociones</a>
-        <a href="#experiencia">Experiencia</a>
+        <a href="#top">Inicio</a>
+        <a href="catalogo.html">Catalogo</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#horarios">Horarios</a>
         <a href="#contacto">Contacto</a>
       </nav>
       <a class="btn btn--primary" href="catalogo.html">Ver catalogo completo</a>
@@ -67,25 +74,17 @@
     <main>
       <section class="hero section reveal reveal--fade">
         <div class="hero__content">
-          <h1>🥬 Mercaderia nueva todos los lunes</h1>
-          <p class="hero__slogan">De la tierra a tu hogar.</p>
+          <img class="hero__logo" src="logo.jpg" alt="Que Papa" />
+          <div class="hero__kicker">
+            <img class="kicker__logo" src="logo.jpg" alt="Que Papa" />
+            <span>Lunes de mercaderia entrante</span>
+          </div>
+          <h1>Que Papa</h1>
+          <h2 class="hero__subtitle">Frutas y verduras frescas</h2>
+          <p class="hero__slogan">"De la tierra a tu hogar."</p>
           <div class="hero__buttons">
             <a class="btn btn--primary" href="catalogo.html">Ver catalogo completo</a>
-            <a class="btn btn--ghost" href="https://wa.me/59899999999" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a>
-          </div>
-          <div class="hero__stats">
-            <article>
-              <span class="js-count" data-count-to="42" data-suffix="+">0</span>
-              <p>Productos</p>
-            </article>
-            <article>
-              <span class="js-count" data-count-to="4">0</span>
-              <p>Categorias</p>
-            </article>
-            <article>
-              <span class="js-count" data-count-to="30" data-suffix="%">0</span>
-              <p>Feria sabado</p>
-            </article>
+            <a class="btn btn--ghost" href="https://wa.me/59892921712" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a>
           </div>
         </div>
         <div class="hero__media">
@@ -94,100 +93,245 @@
             src="https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&w=1200&q=80"
             alt="Frutas y verduras frescas organizadas"
           />
-          <div class="float-tag float-tag--one">Recién llegado</div>
+          <div class="float-tag float-tag--one float-tag--green">🌿 Lunes Mercaderia Nueva</div>
           <div class="float-tag float-tag--two">Calidad premium</div>
           <div class="float-tag float-tag--three">Entrega rapida</div>
           <div class="float-tag float-tag--four">Pedidos por WhatsApp</div>
         </div>
       </section>
 
-      <section class="section highlight-strip reveal reveal--up">
-        <p>Mercaderia entrante todos los lunes para que siempre compres fresco.</p>
-      </section>
-
-      <section class="section benefits reveal reveal--up">
-        <article><i data-lucide="leaf"></i><h3>Productos frescos</h3><p>Seleccionamos frutas y verduras frescas en cada viaje.</p></article>
-        <article><i data-lucide="truck"></i><h3>Entrega rapida</h3><p>Realiza tu pedido y coordinamos la entrega por WhatsApp.</p></article>
-        <article><i data-lucide="badge-dollar-sign"></i><h3>Precios actualizados</h3><p>Todas las semanas actualizamos el catalogo con nuevas ofertas.</p></article>
-        <article><i data-lucide="heart-handshake"></i><h3>Atencion personalizada</h3><p>Respondemos personalmente cada pedido para darte la mejor atencion.</p></article>
-      </section>
-
-      <section class="section weekly-offers reveal reveal--up" id="ofertas">
-        <div class="section-head">
-          <p class="tag">Ofertas de la semana</p>
-          <h2>Promociones activas</h2>
-          <p>Desde aqui solo ves ofertas. La compra se realiza en el catalogo completo.</p>
+      <section class="section info-band reveal reveal--stagger">
+        <div class="info-band__grid">
+          <article class="info-band__item">
+            <i data-lucide="sprout"></i>
+            <h3>Mercaderia nueva</h3>
+            <p>Todos los lunes llega lo mas fresco.</p>
+          </article>
+          <article class="info-band__item">
+            <i data-lucide="leaf"></i>
+            <h3>Seleccion semanal</h3>
+            <p>Productos elegidos cuidadosamente.</p>
+          </article>
+          <article class="info-band__item">
+            <i data-lucide="package-check"></i>
+            <h3>Stock renovado</h3>
+            <p>Frutas y verduras recien ingresadas.</p>
+          </article>
+          <article class="info-band__item">
+            <i data-lucide="shopping-cart"></i>
+            <h3>Feria del sabado</h3>
+            <p>Hasta <strong>10-30% OFF</strong> en productos seleccionados.</p>
+          </article>
         </div>
-        <div class="offers-grid" id="offersGrid"></div>
       </section>
 
       <section class="section experience reveal reveal--stagger" id="experiencia">
+        <div class="experience-layout">
+          <div>
+            <div class="section-head">
+              <p class="tag">Experiencia mas comoda</p>
+              <h2>Un catalogo mas claro, moderno y comodo para elegir</h2>
+              <p>
+                Ahora cada producto se abre en una ventana con imagen, precio y opciones reales para
+                comprar con calma desde el celular o la computadora.
+              </p>
+            </div>
+            <div class="indicator-grid">
+              <article>
+                <h3>Productos</h3>
+                <p class="indicator-number js-count" data-count-to="42" data-suffix="+">0</p>
+              </article>
+              <article>
+                <h3>Categorias</h3>
+                <p class="indicator-number js-count" data-count-to="4">0</p>
+              </article>
+              <article>
+                <h3>Feria sabado</h3>
+                <p class="indicator-number js-count" data-count-to="30" data-suffix="%">0</p>
+              </article>
+            </div>
+            <div class="hero__buttons">
+              <a class="btn btn--primary" href="catalogo.html">Explorar productos</a>
+              <a class="btn btn--ghost" href="https://wa.me/59892921712" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a>
+            </div>
+          </div>
+
+          <div class="experience-right">
+            <div class="why-grid why-grid--col">
+              <article>
+                <div class="feature-icon"><i data-lucide="apple"></i></div>
+                <div>
+                  <h3>Frutas frescas</h3>
+                  <p>Opciones practicas para todos los dias, con imagen y seleccion clara.</p>
+                </div>
+              </article>
+              <article>
+                <div class="feature-icon"><i data-lucide="leaf"></i></div>
+                <div>
+                  <h3>Verduras ordenadas</h3>
+                  <p>Menos saturacion visual y una ventana comoda para elegir cada producto.</p>
+                </div>
+              </article>
+              <article>
+                <div class="feature-icon"><i data-lucide="egg"></i></div>
+                <div>
+                  <h3>Huevos y mascotas</h3>
+                  <p>Todo separado de forma simple para encontrar rapido lo que buscas.</p>
+                </div>
+              </article>
+            </div>
+            <article class="entrada-catalogo">
+              <div>
+                <p class="tag">Entrada al catalogo</p>
+                <p>Entra cuando quieras ver todo el surtido, abrir cada producto en detalle y armar tu pedido sin apuro.</p>
+              </div>
+              <a class="btn btn--primary" href="catalogo.html">Ver catalogo</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section sabados reveal reveal--up" id="sabados">
         <div class="section-head">
-          <p class="tag">Experiencia mas comoda</p>
-          <h2>Un catalogo mas claro, moderno y comodo para elegir.</h2>
-          <p>
-            Ahora cada producto se abre en una ventana con imagen, precio y opciones reales para
-            comprar con calma desde el celular o la computadora.
-          </p>
+          <p class="tag">Sabados especiales</p>
+          <h2>Sabados con descuentos reales y visibles</h2>
+          <p>Mantenemos la informacion clara: los sabados hay descuentos entre 10% y 30% en productos seleccionados.</p>
         </div>
-
-        <div class="indicator-grid">
+        <div class="sabados-grid">
           <article>
-            <h3>Productos</h3>
-            <p class="indicator-number js-count" data-count-to="42" data-suffix="+">0</p>
+            <p class="tag">Dia destacado</p>
+            <h3>Sabados</h3>
+            <p>El mejor momento para aprovechar ofertas seleccionadas.</p>
           </article>
           <article>
-            <h3>Categorias</h3>
-            <p class="indicator-number js-count" data-count-to="4">0</p>
+            <p class="tag">Rango visible</p>
+            <h3>10–30%</h3>
+            <p>Descuentos especiales todos los sabados.</p>
           </article>
           <article>
-            <h3>Feria sabado</h3>
-            <p class="indicator-number js-count" data-count-to="30" data-suffix="%">0</p>
+            <p class="tag">Ofertas activas</p>
+            <h3 class="indicator-number js-count" data-count-to="10" data-suffix="+">0</h3>
+            <p>Productos con opciones destacadas cada semana.</p>
           </article>
         </div>
+        <p class="sabados__note">Consulta las ofertas vigentes directamente por <a href="https://wa.me/59892921712" target="_blank" rel="noopener noreferrer">WhatsApp</a>.</p>
+      </section>
 
-        <div class="hero__buttons">
-          <a class="btn btn--primary" href="catalogo.html">Explorar productos</a>
-          <a class="btn btn--ghost" href="https://wa.me/59899999999" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a>
+      <section class="section about reveal reveal--up" id="nosotros">
+        <div class="about-layout">
+          <div class="section-head">
+            <p class="tag">Quienes somos</p>
+            <h2>Una verduleria con alma de barrio</h2>
+            <p>
+              En Que Papa creemos que comer bien empieza por elegir bien. Trabajamos cada dia para
+              ofrecerte frutas y verduras frescas, con la dedicacion y el carino de un negocio familiar.
+            </p>
+            <p>
+              Conocemos a nuestros clientes por nombre y nos enorgullece ser parte de la rutina de
+              muchas familias de Paso de los Toros.
+            </p>
+          </div>
+          <div class="why-grid">
+            <article>
+              <div class="feature-icon"><i data-lucide="sprout"></i></div>
+              <h3>Productos frescos</h3>
+              <p>Seleccionamos cada fruta y verdura para asegurar la mejor calidad.</p>
+            </article>
+            <article>
+              <div class="feature-icon"><i data-lucide="heart"></i></div>
+              <h3>Atencion familiar</h3>
+              <p>Te recibimos como en casa. Cercania y trato humano siempre.</p>
+            </article>
+            <article>
+              <div class="feature-icon"><i data-lucide="handshake"></i></div>
+              <h3>Confianza</h3>
+              <p>Anos acompanando a las familias de Paso de los Toros.</p>
+            </article>
+            <article>
+              <div class="feature-icon"><i data-lucide="shield-check"></i></div>
+              <h3>Calidad garantizada</h3>
+              <p>Compromiso real con lo que pones en tu mesa.</p>
+            </article>
+          </div>
         </div>
+      </section>
 
-        <div class="why-grid">
-          <article>
-            <h3>🍎 Frutas frescas</h3>
-            <p>Opciones practicas para todos los dias, con imagen y seleccion clara.</p>
+      <section class="section reveal reveal--up" id="horarios">
+        <div class="hours-row">
+          <article class="hour-card hour-card--light">
+            <div class="hour-card__icon"><i data-lucide="clock"></i></div>
+            <h3>Lunes a Viernes</h3>
+            <p class="hour-time">9:00–13:00</p>
+            <p class="hour-time">16:00–20:00</p>
+            <p class="hour-desc">Atencion corrida en dos turnos.</p>
           </article>
-          <article>
-            <h3>🥬 Verduras ordenadas</h3>
-            <p>Menos saturacion visual y una ventana comoda para elegir cada producto.</p>
+          <article class="hour-card hour-card--featured">
+            <div class="hour-card__icon"><i data-lucide="sparkles"></i></div>
+            <p class="hour-card__label">Sabados</p>
+            <h3>Feria de descuentos</h3>
+            <p class="hour-time">9:00–13:00</p>
+            <span class="hour-badge">10% al 30% OFF</span>
           </article>
-          <article>
-            <h3>🥚 Huevos y mascotas</h3>
-            <p>Todo separado de forma simple para encontrar rapido lo que buscas.</p>
+          <article class="hour-card hour-card--muted">
+            <div class="hour-card__icon"><i data-lucide="clock"></i></div>
+            <h3>Domingos</h3>
+            <p class="hour-closed">Cerrado</p>
+            <p class="hour-desc">Descansamos para volver con mas frescura el lunes.</p>
           </article>
         </div>
       </section>
 
-      <section class="section catalog-entry reveal reveal--zoom">
+      <section class="section payments reveal reveal--up">
         <div class="section-head">
-          <p class="tag">Entrada al catalogo</p>
-          <h2>Entra cuando quieras ver todo el surtido</h2>
-          <p>
-            Entra cuando quieras ver todo el surtido, abrir cada producto en detalle y armar tu
-            pedido sin apuro.
-          </p>
+          <p class="tag">Medios de pago</p>
+          <h2>Paga como te resulte mas comodo</h2>
+          <p>Aceptamos todas las formas de pago electronicas y tarjetas.</p>
         </div>
-        <a class="btn btn--primary catalog-entry__btn" href="catalogo.html">Ver catalogo completo</a>
+        <div class="payments-grid">
+          <article><i data-lucide="wallet"></i><h3>Getnet</h3></article>
+          <article><i data-lucide="credit-card"></i><h3>Handy</h3></article>
+          <article><i data-lucide="badge-dollar-sign"></i><h3>Tarjetas de credito</h3></article>
+          <article><i data-lucide="landmark"></i><h3>Tarjetas de debito</h3></article>
+          <article><i data-lucide="smartphone"></i><h3>Pagos electronicos</h3></article>
+        </div>
       </section>
 
-      <section class="section testimonials reveal reveal--up">
+      <section class="section reveal reveal--up" id="resenas">
         <div class="section-head">
-          <p class="tag">Opiniones</p>
-          <h2>Clientes felices</h2>
+          <p class="tag">Resenas</p>
+          <h2>Lo que dicen nuestros clientes</h2>
         </div>
         <div class="testimonials-grid">
-          <blockquote><p class="stars">★★★★★</p><p>Excelente calidad y muy buenos precios.</p></blockquote>
-          <blockquote><p class="stars">★★★★★</p><p>Siempre llega todo fresco.</p></blockquote>
-          <blockquote><p class="stars">★★★★★</p><p>El pedido por WhatsApp es rapidisimo.</p></blockquote>
+          <blockquote>
+            <p class="stars">★★★★★</p>
+            <p>"Siempre fruta y verdura espectacular. Los lunes voy si o si por lo nuevo."</p>
+            <footer><strong>Maria G.</strong> · Frescura</footer>
+          </blockquote>
+          <blockquote>
+            <p class="stars">★★★★★</p>
+            <p>"Trato amable y precios muy justos. Da gusto ir a comprar."</p>
+            <footer><strong>Carlos D.</strong> · Atencion</footer>
+          </blockquote>
+          <blockquote>
+            <p class="stars">★★★★★</p>
+            <p>"La feria de los sabados es imperdible, calidad y descuentos reales."</p>
+            <footer><strong>Laura P.</strong> · Calidad</footer>
+          </blockquote>
+          <blockquote>
+            <p class="stars">★★★★★</p>
+            <p>"Pedido por WhatsApp y entrega rapidisima. Una maravilla."</p>
+            <footer><strong>Andres R.</strong> · Rapidez</footer>
+          </blockquote>
+          <blockquote>
+            <p class="stars">★★★★★</p>
+            <p>"Verduras siempre frescas y bien presentadas. Recomiendo cien por ciento."</p>
+            <footer><strong>Sofia M.</strong> · Confianza</footer>
+          </blockquote>
+          <blockquote>
+            <p class="stars">★★★★★</p>
+            <p>"El ambiente del local es muy agradable, te asesoran con paciencia."</p>
+            <footer><strong>Diego F.</strong> · Ambiente</footer>
+          </blockquote>
         </div>
       </section>
 
@@ -195,11 +339,17 @@
         <div class="contact__info">
           <p class="tag">Contacto</p>
           <h2>Visitanos o escribinos</h2>
-          <p><strong>Direccion:</strong> Adelaida Puyol 534, Paso de los Toros</p>
-          <p><strong>WhatsApp:</strong> +598 99 XXX XXX</p>
+          <p>Estamos en el corazon de Paso de los Toros. Pasa a saludarnos o contactanos por el medio que prefieras.</p>
+          <p><strong>Direccion:</strong> Adelaida Puyol 534, Paso de los Toros, Tacuarembo</p>
+          <p><strong>WhatsApp:</strong> +598 92 921 712</p>
           <p><strong>Instagram:</strong> @quepapa2025</p>
+          <p><strong>Email:</strong> quepapa2025@gmail.com</p>
           <p><strong>Horario:</strong> Lun a Vie 9:00-13:00 y 16:00-20:00 | Sab 9:00-13:00</p>
-          <a class="btn btn--primary" href="https://wa.me/59899999999" target="_blank" rel="noopener noreferrer">Hablar por WhatsApp</a>
+          <div class="hero__buttons">
+            <a class="btn btn--primary" href="https://wa.me/59892921712" target="_blank" rel="noopener noreferrer">Escribir por WhatsApp</a>
+            <a class="btn btn--ghost" href="https://instagram.com/quepapa2025" target="_blank" rel="noopener noreferrer">Seguir en Instagram</a>
+            <a class="btn btn--ghost" href="https://www.google.com/maps/search/?api=1&query=Adelaida+Puyol+534%2C+45100+Paso+de+los+Toros%2C+Tacuarembo%2C+Uruguay" target="_blank" rel="noopener noreferrer">Como llegar</a>
+          </div>
         </div>
         <iframe
           title="Mapa de Que Papa"
@@ -212,24 +362,24 @@
 
     <footer class="footer">
       <div class="footer__brand">
-        <div class="logo">
-          <span class="logo__mark">QP</span>
-          <span><strong>Que Papa</strong><small>Productos frescos todos los dias.</small></span>
-        </div>
+        <img class="footer__logo" src="logo.jpg" alt="Que Papa" />
+        <span><strong>Que Papa</strong><small>De la tierra a tu hogar.</small></span>
       </div>
       <nav class="footer__links" aria-label="Enlaces rapidos">
         <a href="#inicio">Inicio</a>
         <a href="#ofertas">Promociones</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#horarios">Horarios</a>
         <a href="catalogo.html">Catalogo</a>
         <a href="#contacto">Contacto</a>
       </nav>
       <div class="footer__social">
         <a href="https://instagram.com/quepapa2025" target="_blank" rel="noopener noreferrer">Instagram</a>
-        <a href="https://wa.me/59899999999" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <a href="https://wa.me/59892921712" target="_blank" rel="noopener noreferrer">WhatsApp</a>
       </div>
     </footer>
 
-    <a class="whatsapp-float" href="https://wa.me/59899999999" target="_blank" rel="noopener noreferrer" aria-label="Abrir WhatsApp">
+    <a class="whatsapp-float" href="https://wa.me/59892921712" target="_blank" rel="noopener noreferrer" aria-label="Abrir WhatsApp">
       <i data-lucide="message-circle"></i>
     </a>
 

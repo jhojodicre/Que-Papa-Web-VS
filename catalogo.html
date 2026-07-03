@@ -8,11 +8,12 @@
       name="description"
       content="Explora el catalogo completo de Que Papa, agrega productos al carrito y envia tu pedido por WhatsApp."
     />
-    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="logo.jpg" type="image/jpeg" />
+    <link rel="apple-touch-icon" href="logo.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
@@ -26,7 +27,7 @@
     <header class="header" id="inicio">
       <div class="header__inner">
         <a class="logo" href="index.html" aria-label="Ir al inicio">
-          <span class="logo__mark">QP</span>
+          <img class="logo__img" src="logo.jpg" alt="Que Papa" />
           <span>
             <strong>Que Papa</strong>
             <small>De la tierra a tu hogar</small>
@@ -35,15 +36,16 @@
 
         <nav class="nav" aria-label="Menu principal">
           <a href="index.html">Inicio</a>
-          <a href="index.html#ofertas">Promociones</a>
           <a href="#catalogo">Catalogo</a>
           <a href="index.html#contacto">Contacto</a>
         </nav>
 
         <div class="header__actions">
-          <a class="btn btn--primary" href="https://wa.me/59899999999" target="_blank" rel="noopener noreferrer">
-            Pedir por WhatsApp
-          </a>
+          <a class="btn btn--ghost" href="#catalogo">Catalogo</a>
+          <button class="btn btn--primary cart-header-btn" id="cartHeaderBtn" aria-label="Abrir carrito">
+            <i data-lucide="shopping-cart"></i> Carrito
+            <span class="cart-header-count" id="cartHeaderCount">0</span>
+          </button>
           <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-label="Abrir menu">
             <i data-lucide="menu"></i>
           </button>
@@ -54,27 +56,39 @@
     <aside class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
       <nav class="mobile-nav" aria-label="Menu movil">
         <a href="index.html">Inicio</a>
-        <a href="index.html#ofertas">Promociones</a>
         <a href="#catalogo">Catalogo</a>
         <a href="index.html#contacto">Contacto</a>
       </nav>
-      <a class="btn btn--primary" href="https://wa.me/59899999999" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a>
+      <a class="btn btn--primary" href="https://wa.me/59892921712" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a>
     </aside>
 
     <main>
       <section class="section reveal reveal--fade">
-        <div class="section-head">
-          <p class="tag">Catalogo completo</p>
-          <h1>Elegi tus productos y arma tu pedido</h1>
-          <p>Selecciona cantidades, revisa el carrito y envia por WhatsApp en pocos pasos.</p>
+        <div class="catalog-hero">
+          <a href="index.html" class="catalog-back">
+            <i data-lucide="arrow-left"></i> Volver al inicio
+          </a>
+          <div class="catalog-hero__tag">
+            <i data-lucide="sparkles"></i>
+            <span>Catalogo completo de Que Papa</span>
+          </div>
+          <h1 class="catalog-hero__title">Explora el mercado con mas calma</h1>
+          <p class="catalog-hero__desc">Toca cada producto para abrir una ventana comoda con imagen, precio, opciones y boton para añadir al carrito.</p>
+          <div class="catalog-info-card">
+            <div class="catalog-info-card__item">
+              <p class="catalog-info-card__label">Mercaderia nueva</p>
+              <p class="catalog-info-card__value">Todos los lunes</p>
+            </div>
+            <div class="catalog-info-card__divider"></div>
+            <p class="catalog-info-card__note">Sabados con descuentos entre 10% y 30% y pedido final por WhatsApp.</p>
+          </div>
         </div>
       </section>
 
-      <section class="section catalog-head reveal reveal--up" id="catalogo">
-        <div>
-          <p class="tag">Nuestro catalogo</p>
-          <h2>Elegi productos, suma al carrito y envia por WhatsApp</h2>
-          <p>Compra en pocos minutos con una experiencia simple, clara y moderna.</p>
+      <section class="section catalog-products-section" id="catalogo">
+        <div class="catalog-products-head">
+          <p class="tag">Productos</p>
+          <h2>Frutas, verduras, mascotas y huevos</h2>
         </div>
         <div class="catalog-controls">
           <label for="searchInput" class="sr-only">Buscar productos</label>
@@ -82,9 +96,6 @@
           <div class="chips" id="filterChips"></div>
           <p class="catalog-count" id="catalogCount">0 productos disponibles</p>
         </div>
-      </section>
-
-      <section class="section catalog-grid-wrap reveal reveal--up">
         <div class="catalog-grid" id="catalogGrid"></div>
       </section>
 
@@ -103,20 +114,17 @@
 
     <footer class="footer">
       <div class="footer__brand">
-        <div class="logo">
-          <span class="logo__mark">QP</span>
-          <span><strong>Que Papa</strong><small>Productos frescos todos los dias.</small></span>
-        </div>
+        <img class="footer__logo" src="logo.jpg" alt="Que Papa" />
+        <span><strong>Que Papa</strong><small>De la tierra a tu hogar.</small></span>
       </div>
       <nav class="footer__links" aria-label="Enlaces rapidos">
         <a href="index.html">Inicio</a>
-        <a href="index.html#ofertas">Promociones</a>
         <a href="#catalogo">Catalogo</a>
         <a href="index.html#contacto">Contacto</a>
       </nav>
       <div class="footer__social">
         <a href="https://instagram.com/quepapa2025" target="_blank" rel="noopener noreferrer">Instagram</a>
-        <a href="https://wa.me/59899999999" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <a href="https://wa.me/59892921712" target="_blank" rel="noopener noreferrer">WhatsApp</a>
       </div>
     </footer>
 
@@ -126,18 +134,112 @@
     </button>
 
     <aside class="cart-panel" id="cartPanel" aria-hidden="true">
-      <header>
-        <h3>Tu carrito</h3>
-        <button id="closeCart" aria-label="Cerrar carrito"><i data-lucide="x"></i></button>
-      </header>
-      <div class="cart-items" id="cartItems"></div>
-      <footer>
-        <p><span>Total</span><strong id="cartTotal">$0.00</strong></p>
-        <div class="cart-actions">
-          <button class="btn btn--ghost" id="clearCart">Vaciar carrito</button>
-          <button class="btn btn--primary" id="checkoutBtn">Finalizar pedido</button>
+
+      <!-- Vista: Carrito -->
+      <div class="cart-view" id="cartView">
+        <header>
+          <h3 class="cart-panel__title">Tu pedido</h3>
+          <button id="closeCart" aria-label="Cerrar carrito"><i data-lucide="x"></i></button>
+        </header>
+        <div class="cart-items" id="cartItems"></div>
+        <footer>
+          <div class="cart-shipping-badge">
+            <i data-lucide="truck"></i>
+            <span>Envío a domicilio <strong>SIN COSTO</strong></span>
+          </div>
+          <div class="cart-total-row">
+            <span>Total</span>
+            <strong id="cartTotal">$0,00</strong>
+          </div>
+          <div class="cart-actions">
+            <button class="btn btn--ghost" id="clearCart">Vaciar</button>
+            <button class="btn btn--primary cart-continue-btn" id="checkoutBtn">Continuar</button>
+          </div>
+        </footer>
+      </div>
+
+      <!-- Vista: Checkout -->
+      <div class="checkout-view" id="checkoutView">
+        <header>
+          <button class="checkout-back-btn" id="backToCart" aria-label="Volver al carrito">
+            <i data-lucide="arrow-left"></i>
+          </button>
+          <h3 class="cart-panel__title">Finalizar pedido</h3>
+          <button id="closeCheckoutPanel" aria-label="Cerrar"><i data-lucide="x"></i></button>
+        </header>
+        <div class="checkout-scroll">
+          <form id="checkoutForm">
+
+            <div class="checkout-field">
+              <label for="inputName">Nombre completo <span class="req">*</span></label>
+              <input id="inputName" required name="name" type="text" placeholder="Tu nombre y apellido" />
+            </div>
+
+            <div class="checkout-field">
+              <label for="inputPhone">Telefono <span class="req">*</span></label>
+              <input id="inputPhone" required name="phone" type="tel" placeholder="099 123 456" />
+            </div>
+
+            <div class="checkout-field">
+              <label for="inputEmail">Correo electronico <span class="req">*</span></label>
+              <input id="inputEmail" required name="email" type="email" placeholder="tu@correo.com" />
+              <p class="checkout-hint">Usaremos tu correo para enviarte la factura.</p>
+            </div>
+
+            <div class="checkout-field">
+              <label>Metodo de entrega <span class="req">*</span></label>
+              <div class="checkout-radio-group">
+                <label class="checkout-radio-card">
+                  <input type="radio" name="delivery" value="Retiro en el local" />
+                  <i data-lucide="store"></i>
+                  <span>Retiro en el local</span>
+                </label>
+                <label class="checkout-radio-card">
+                  <input type="radio" name="delivery" value="Entrega a Domicilio" checked />
+                  <i data-lucide="truck"></i>
+                  <span>Domicilio</span>
+                  <span class="gratis-badge">GRATIS</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="checkout-field" id="addressField">
+              <label for="inputAddress">Direccion de entrega</label>
+              <input id="inputAddress" name="address" type="text" placeholder="Calle, numero, apartamento..." />
+            </div>
+
+            <div class="checkout-field">
+              <label>Metodo de pago <span class="req">*</span></label>
+              <div class="checkout-radio-group">
+                <label class="checkout-radio-card">
+                  <input type="radio" name="payment" value="Efectivo" checked />
+                  <i data-lucide="banknote"></i>
+                  <span>Efectivo</span>
+                </label>
+                <label class="checkout-radio-card">
+                  <input type="radio" name="payment" value="Tarjeta" />
+                  <i data-lucide="credit-card"></i>
+                  <span>Tarjeta</span>
+                </label>
+              </div>
+              <p class="checkout-hint">El pago se coordina al entregar el pedido. No se cobra desde la web.</p>
+            </div>
+
+            <div class="checkout-approx-total">
+              <span>Total aproximado</span>
+              <strong id="checkoutTotal">$0,00</strong>
+            </div>
+
+          </form>
         </div>
-      </footer>
+        <div class="checkout-bottom">
+          <button class="btn btn--ghost" id="backToCart2">Volver</button>
+          <button class="btn btn--primary checkout-submit-btn" id="checkoutSubmitBtn">
+            <i data-lucide="send"></i> Finalizar pedido
+          </button>
+        </div>
+      </div>
+
     </aside>
 
     <dialog class="modal" id="productModal">
@@ -145,26 +247,9 @@
       <div class="product-modal__grid" id="productModalContent"></div>
     </dialog>
 
-    <dialog class="modal checkout-modal" id="checkoutModal">
-      <button class="modal-close" id="closeCheckoutModal" aria-label="Cerrar"><i data-lucide="x"></i></button>
-      <h3>Finalizar pedido</h3>
-      <form id="checkoutForm">
-        <label>Nombre completo<input required name="name" type="text" /></label>
-        <label>Telefono<input required name="phone" type="tel" /></label>
-        <label>Direccion<input required name="address" type="text" /></label>
-        <label>Observaciones (opcional)<textarea name="notes" rows="3"></textarea></label>
-        <fieldset>
-          <legend>Como vas a pagar?</legend>
-          <label><input type="radio" name="payment" value="Efectivo" checked /> Efectivo</label>
-          <label><input type="radio" name="payment" value="Tarjeta" /> Tarjeta</label>
-        </fieldset>
-        <button class="btn btn--primary" type="submit">Enviar pedido por WhatsApp</button>
-      </form>
-    </dialog>
-
     <div class="toast" id="toast" aria-live="polite"></div>
 
-    <a class="whatsapp-float" href="https://wa.me/59899999999" target="_blank" rel="noopener noreferrer" aria-label="Abrir WhatsApp">
+    <a class="whatsapp-float" href="https://wa.me/59892921712" target="_blank" rel="noopener noreferrer" aria-label="Abrir WhatsApp">
       <i data-lucide="message-circle"></i>
     </a>
 
