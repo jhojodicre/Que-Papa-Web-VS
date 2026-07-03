@@ -13,23 +13,7 @@
       content="verduleria, fruteria, pedidos por whatsapp, frutas frescas, verduras frescas, paso de los toros"
     />
     <meta name="robots" content="index,follow" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Que Papa | Verduleria y Fruteria" />
-    <meta
-      property="og:description"
-      content="Productos frescos todos los dias. Armamos tu pedido y lo enviamos por WhatsApp en pocos pasos."
-    />
-    <meta property="og:image" content="https://images.unsplash.com/photo-1610832958506-aa56368176cf?auto=format&fit=crop&w=1200&q=80" />
-    <meta property="og:url" content="https://quepapafresh.lovable.app" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Que Papa | Verduleria y Fruteria" />
-    <meta
-      name="twitter:description"
-      content="Frutas y verduras frescas con pedidos rapidos por WhatsApp."
-    />
-    <meta name="twitter:image" content="https://images.unsplash.com/photo-1610832958506-aa56368176cf?auto=format&fit=crop&w=1200&q=80" />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-    <link rel="canonical" href="https://quepapafresh.lovable.app" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -38,37 +22,9 @@
     />
     <link rel="stylesheet" href="styles.css" />
     <script src="https://unpkg.com/lucide@latest"></script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Que Papa",
-        "image": "https://images.unsplash.com/photo-1610832958506-aa56368176cf?auto=format&fit=crop&w=1200&q=80",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Adelaida Puyol 534",
-          "addressLocality": "Paso de los Toros",
-          "addressRegion": "Tacuarembo",
-          "addressCountry": "UY"
-        },
-        "telephone": "+59899999999",
-        "url": "https://quepapafresh.lovable.app",
-        "sameAs": ["https://instagram.com/quepapa2025"],
-        "servesCuisine": "Frutas y verduras"
-      }
-    </script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Que Papa",
-        "url": "https://quepapafresh.lovable.app",
-        "logo": "https://images.unsplash.com/photo-1610832958506-aa56368176cf?auto=format&fit=crop&w=300&q=80"
-      }
-    </script>
   </head>
-  <body>
-    <a class="skip-link" href="#catalogo">Saltar al catalogo</a>
+  <body data-page="home">
+    <a class="skip-link" href="#ofertas">Saltar al contenido</a>
     <div class="bg-blob bg-blob--1" aria-hidden="true"></div>
     <div class="bg-blob bg-blob--2" aria-hidden="true"></div>
 
@@ -84,16 +40,13 @@
 
         <nav class="nav" aria-label="Menu principal">
           <a href="#inicio">Inicio</a>
-          <a href="#catalogo">Catalogo</a>
-          <a href="#ofertas">Ofertas</a>
-          <a href="#como-comprar">Como comprar</a>
+          <a href="#ofertas">Promociones</a>
+          <a href="#experiencia">Experiencia</a>
           <a href="#contacto">Contacto</a>
         </nav>
 
         <div class="header__actions">
-          <a class="btn btn--primary" href="https://wa.me/59899999999" target="_blank" rel="noopener noreferrer">
-            Hacer pedido
-          </a>
+          <a class="btn btn--primary" href="catalogo.html">Ver catalogo completo</a>
           <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-label="Abrir menu">
             <i data-lucide="menu"></i>
           </button>
@@ -104,33 +57,35 @@
     <aside class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
       <nav class="mobile-nav" aria-label="Menu movil">
         <a href="#inicio">Inicio</a>
-        <a href="#catalogo">Catalogo</a>
-        <a href="#ofertas">Ofertas</a>
-        <a href="#como-comprar">Como comprar</a>
+        <a href="#ofertas">Promociones</a>
+        <a href="#experiencia">Experiencia</a>
         <a href="#contacto">Contacto</a>
       </nav>
-      <a class="btn btn--primary" href="https://wa.me/59899999999" target="_blank" rel="noopener noreferrer">
-        Hacer pedido
-      </a>
+      <a class="btn btn--primary" href="catalogo.html">Ver catalogo completo</a>
     </aside>
 
     <main>
       <section class="hero section reveal reveal--fade">
         <div class="hero__content">
-          <p class="tag">Mercaderia nueva todos los lunes</p>
-          <h1>Frutas y verduras frescas, directo a tu casa.</h1>
-          <p>
-            Productos seleccionados, precios actualizados y pedidos rapidos por WhatsApp.
-            Elegi lo que necesitas y nosotros nos encargamos del resto.
-          </p>
+          <h1>🥬 Mercaderia nueva todos los lunes</h1>
+          <p class="hero__slogan">De la tierra a tu hogar.</p>
           <div class="hero__buttons">
-            <a class="btn btn--primary" href="https://wa.me/59899999999" target="_blank" rel="noopener noreferrer">Hacer mi pedido</a>
-            <a class="btn btn--ghost" href="#catalogo">Ver catalogo</a>
+            <a class="btn btn--primary" href="catalogo.html">Ver catalogo completo</a>
+            <a class="btn btn--ghost" href="https://wa.me/59899999999" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a>
           </div>
           <div class="hero__stats">
-            <article><span id="statProducts">0+</span><p>Productos</p></article>
-            <article><span>10% a 30%</span><p>OFF sabados</p></article>
-            <article><span>Respuesta</span><p>Rapida por WhatsApp</p></article>
+            <article>
+              <span class="js-count" data-count-to="42" data-suffix="+">0</span>
+              <p>Productos</p>
+            </article>
+            <article>
+              <span class="js-count" data-count-to="4">0</span>
+              <p>Categorias</p>
+            </article>
+            <article>
+              <span class="js-count" data-count-to="30" data-suffix="%">0</span>
+              <p>Feria sabado</p>
+            </article>
           </div>
         </div>
         <div class="hero__media">
@@ -139,11 +94,15 @@
             src="https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&w=1200&q=80"
             alt="Frutas y verduras frescas organizadas"
           />
-          <div class="float-tag float-tag--one">Reciem llegado</div>
+          <div class="float-tag float-tag--one">Recién llegado</div>
           <div class="float-tag float-tag--two">Calidad premium</div>
           <div class="float-tag float-tag--three">Entrega rapida</div>
           <div class="float-tag float-tag--four">Pedidos por WhatsApp</div>
         </div>
+      </section>
+
+      <section class="section highlight-strip reveal reveal--up">
+        <p>Mercaderia entrante todos los lunes para que siempre compres fresco.</p>
       </section>
 
       <section class="section benefits reveal reveal--up">
@@ -156,71 +115,68 @@
       <section class="section weekly-offers reveal reveal--up" id="ofertas">
         <div class="section-head">
           <p class="tag">Ofertas de la semana</p>
-          <h2>Aprovecha promociones activas</h2>
+          <h2>Promociones activas</h2>
+          <p>Desde aqui solo ves ofertas. La compra se realiza en el catalogo completo.</p>
         </div>
         <div class="offers-grid" id="offersGrid"></div>
       </section>
 
-      <section class="section why reveal reveal--stagger">
+      <section class="section experience reveal reveal--stagger" id="experiencia">
         <div class="section-head">
-          <p class="tag">Confianza real</p>
-          <h2>Por que elegir Que Papa</h2>
-          <p>Un negocio familiar moderno, con proceso simple y calidad constante.</p>
+          <p class="tag">Experiencia mas comoda</p>
+          <h2>Un catalogo mas claro, moderno y comodo para elegir.</h2>
+          <p>
+            Ahora cada producto se abre en una ventana con imagen, precio y opciones reales para
+            comprar con calma desde el celular o la computadora.
+          </p>
         </div>
+
+        <div class="indicator-grid">
+          <article>
+            <h3>Productos</h3>
+            <p class="indicator-number js-count" data-count-to="42" data-suffix="+">0</p>
+          </article>
+          <article>
+            <h3>Categorias</h3>
+            <p class="indicator-number js-count" data-count-to="4">0</p>
+          </article>
+          <article>
+            <h3>Feria sabado</h3>
+            <p class="indicator-number js-count" data-count-to="30" data-suffix="%">0</p>
+          </article>
+        </div>
+
+        <div class="hero__buttons">
+          <a class="btn btn--primary" href="catalogo.html">Explorar productos</a>
+          <a class="btn btn--ghost" href="https://wa.me/59899999999" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a>
+        </div>
+
         <div class="why-grid">
-          <article><h3>Calidad</h3><p>Seleccionamos personalmente cada producto.</p></article>
-          <article><h3>Frescura</h3><p>Mercaderia reciem llegada.</p></article>
-          <article><h3>Ofertas</h3><p>Promociones semanales reales.</p></article>
-          <article><h3>Atencion</h3><p>Siempre respondemos por WhatsApp.</p></article>
-          <article><h3>Rapidez</h3><p>Compra intuitiva y sin vueltas.</p></article>
-          <article><h3>Confianza</h3><p>Cada pedido se arma para cada cliente.</p></article>
+          <article>
+            <h3>🍎 Frutas frescas</h3>
+            <p>Opciones practicas para todos los dias, con imagen y seleccion clara.</p>
+          </article>
+          <article>
+            <h3>🥬 Verduras ordenadas</h3>
+            <p>Menos saturacion visual y una ventana comoda para elegir cada producto.</p>
+          </article>
+          <article>
+            <h3>🥚 Huevos y mascotas</h3>
+            <p>Todo separado de forma simple para encontrar rapido lo que buscas.</p>
+          </article>
         </div>
       </section>
 
-      <section class="section favorites reveal reveal--zoom">
+      <section class="section catalog-entry reveal reveal--zoom">
         <div class="section-head">
-          <p class="tag">Favoritos</p>
-          <h2>Los favoritos de nuestros clientes</h2>
+          <p class="tag">Entrada al catalogo</p>
+          <h2>Entra cuando quieras ver todo el surtido</h2>
+          <p>
+            Entra cuando quieras ver todo el surtido, abrir cada producto en detalle y armar tu
+            pedido sin apuro.
+          </p>
         </div>
-        <div class="favorites-track" id="favoritesTrack" aria-label="Carrusel de favoritos"></div>
-      </section>
-
-      <section class="section offer-banner reveal reveal--fade">
-        <div>
-          <h2>Aprovecha nuestras ofertas semanales</h2>
-          <p>Actualizamos precios constantemente para darte la mejor relacion calidad precio.</p>
-        </div>
-        <button class="btn btn--primary" id="seeOffersBtn">Ver ofertas</button>
-      </section>
-
-      <section class="section catalog-head reveal reveal--up" id="catalogo">
-        <div>
-          <p class="tag">Nuestro catalogo</p>
-          <h2>Elegi productos, suma al carrito y envia por WhatsApp</h2>
-          <p>Compra en pocos minutos con una experiencia simple, clara y moderna.</p>
-        </div>
-        <div class="catalog-controls">
-          <label for="searchInput" class="sr-only">Buscar productos</label>
-          <input id="searchInput" type="search" placeholder="Buscar productos..." autocomplete="off" />
-          <div class="chips" id="filterChips"></div>
-          <p class="catalog-count" id="catalogCount">0 productos disponibles</p>
-        </div>
-      </section>
-
-      <section class="section catalog-grid-wrap reveal reveal--up">
-        <div class="catalog-grid" id="catalogGrid"></div>
-      </section>
-
-      <section class="section steps reveal reveal--up" id="como-comprar">
-        <div class="section-head">
-          <p class="tag">Como funciona</p>
-          <h2>Compra facil en 3 pasos</h2>
-        </div>
-        <div class="steps-grid">
-          <article><span>1</span><h3>Elegi productos</h3><p>Busca, filtra y abre cada producto para definir tu cantidad.</p></article>
-          <article><span>2</span><h3>Arma tu carrito</h3><p>Agrega todo lo que necesitas y revisa el total al instante.</p></article>
-          <article><span>3</span><h3>Envia por WhatsApp</h3><p>Completa tus datos y envia el pedido completo al negocio.</p></article>
-        </div>
+        <a class="btn btn--primary catalog-entry__btn" href="catalogo.html">Ver catalogo completo</a>
       </section>
 
       <section class="section testimonials reveal reveal--up">
@@ -232,19 +188,6 @@
           <blockquote><p class="stars">★★★★★</p><p>Excelente calidad y muy buenos precios.</p></blockquote>
           <blockquote><p class="stars">★★★★★</p><p>Siempre llega todo fresco.</p></blockquote>
           <blockquote><p class="stars">★★★★★</p><p>El pedido por WhatsApp es rapidisimo.</p></blockquote>
-        </div>
-      </section>
-
-      <section class="section faq reveal reveal--up">
-        <div class="section-head">
-          <p class="tag">Preguntas frecuentes</p>
-          <h2>Respuestas rapidas</h2>
-        </div>
-        <div class="faq-list">
-          <details><summary>Hacen envios?</summary><p>Si, coordinamos envio segun zona por WhatsApp.</p></details>
-          <details><summary>Como realizo un pedido?</summary><p>Seleccionando productos y enviando el carrito por WhatsApp.</p></details>
-          <details><summary>Como pago?</summary><p>En efectivo o tarjeta al momento de recibir el pedido.</p></details>
-          <details><summary>Puedo comprar menos de un kilo?</summary><p>Si, los productos por peso permiten comprar desde 100 gramos.</p></details>
         </div>
       </section>
 
@@ -276,8 +219,8 @@
       </div>
       <nav class="footer__links" aria-label="Enlaces rapidos">
         <a href="#inicio">Inicio</a>
-        <a href="#catalogo">Catalogo</a>
-        <a href="#ofertas">Ofertas</a>
+        <a href="#ofertas">Promociones</a>
+        <a href="catalogo.html">Catalogo</a>
         <a href="#contacto">Contacto</a>
       </nav>
       <div class="footer__social">
@@ -285,50 +228,6 @@
         <a href="https://wa.me/59899999999" target="_blank" rel="noopener noreferrer">WhatsApp</a>
       </div>
     </footer>
-
-    <button class="cart-fab" id="cartFab" aria-label="Abrir carrito">
-      <i data-lucide="shopping-cart"></i>
-      <span id="cartFabCount">0</span>
-    </button>
-
-    <aside class="cart-panel" id="cartPanel" aria-hidden="true">
-      <header>
-        <h3>Tu carrito</h3>
-        <button id="closeCart" aria-label="Cerrar carrito"><i data-lucide="x"></i></button>
-      </header>
-      <div class="cart-items" id="cartItems"></div>
-      <footer>
-        <p><span>Total</span><strong id="cartTotal">$0.00</strong></p>
-        <div class="cart-actions">
-          <button class="btn btn--ghost" id="clearCart">Vaciar carrito</button>
-          <button class="btn btn--primary" id="checkoutBtn">Finalizar pedido</button>
-        </div>
-      </footer>
-    </aside>
-
-    <dialog class="modal" id="productModal">
-      <button class="modal-close" id="closeProductModal" aria-label="Cerrar"><i data-lucide="x"></i></button>
-      <div class="product-modal__grid" id="productModalContent"></div>
-    </dialog>
-
-    <dialog class="modal checkout-modal" id="checkoutModal">
-      <button class="modal-close" id="closeCheckoutModal" aria-label="Cerrar"><i data-lucide="x"></i></button>
-      <h3>Finalizar pedido</h3>
-      <form id="checkoutForm">
-        <label>Nombre completo<input required name="name" type="text" /></label>
-        <label>Telefono<input required name="phone" type="tel" /></label>
-        <label>Direccion<input required name="address" type="text" /></label>
-        <label>Observaciones (opcional)<textarea name="notes" rows="3"></textarea></label>
-        <fieldset>
-          <legend>Como vas a pagar?</legend>
-          <label><input type="radio" name="payment" value="Efectivo" checked /> Efectivo</label>
-          <label><input type="radio" name="payment" value="Tarjeta" /> Tarjeta</label>
-        </fieldset>
-        <button class="btn btn--primary" type="submit">Enviar pedido por WhatsApp</button>
-      </form>
-    </dialog>
-
-    <div class="toast" id="toast" aria-live="polite"></div>
 
     <a class="whatsapp-float" href="https://wa.me/59899999999" target="_blank" rel="noopener noreferrer" aria-label="Abrir WhatsApp">
       <i data-lucide="message-circle"></i>

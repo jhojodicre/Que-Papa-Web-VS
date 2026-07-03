@@ -337,6 +337,13 @@ p {
   gap: 10px;
 }
 
+.hero__slogan {
+  margin-top: 10px;
+  font-size: clamp(1.1rem, 2.2vw, 1.7rem);
+  font-weight: 600;
+  color: var(--green);
+}
+
 .hero__stats {
   margin-top: 24px;
   display: grid;
@@ -460,6 +467,21 @@ p {
   margin-bottom: 20px;
 }
 
+.highlight-strip {
+  margin-top: -20px;
+  text-align: center;
+}
+
+.highlight-strip p {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  padding: 14px;
+  font-weight: 600;
+  color: var(--green);
+}
+
 .weekly-offers {
   padding: 66px 22px;
   border: 1px solid #ecdecc;
@@ -511,6 +533,10 @@ p {
   padding: 12px;
 }
 
+.offers-grid .btn {
+  width: 100%;
+}
+
 .old-price {
   text-decoration: line-through;
   color: #919191;
@@ -527,6 +553,31 @@ p {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 12px;
+}
+
+.experience {
+  padding: 36px 0;
+}
+
+.indicator-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.indicator-grid article {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  padding: 14px;
+}
+
+.indicator-number {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 700;
+  color: var(--green);
 }
 
 .why-grid article {
@@ -572,6 +623,21 @@ p {
 .offer-banner p,
 .offer-banner h2 {
   color: #fff;
+}
+
+.catalog-entry {
+  text-align: center;
+  border: 1px dashed var(--line);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.catalog-entry .section-head {
+  margin-bottom: 14px;
+}
+
+.catalog-entry__btn {
+  min-width: 260px;
 }
 
 .catalog-head {
@@ -1066,6 +1132,7 @@ p {
   }
 
   .why-grid,
+  .indicator-grid,
   .steps-grid,
   .testimonials-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -1093,6 +1160,7 @@ p {
   }
 
   .benefits,
+  .indicator-grid,
   .why-grid,
   .steps-grid,
   .testimonials-grid {
@@ -1106,17 +1174,5 @@ p {
   .footer {
     flex-direction: column;
     align-items: flex-start;
-  }
-  }
-
-  .grid--three,
-  .grid--four,
-  .hours {
-    grid-template-columns: 1fr;
-  }
-
-  .site-footer {
-    flex-direction: column;
-    gap: 0.4rem;
   }
 }
