@@ -141,7 +141,7 @@ p {
   top: 0;
   z-index: 40;
   border-bottom: 1px solid transparent;
-  transition: all 250ms ease;
+  transition: background-color 250ms ease, border-color 250ms ease, box-shadow 250ms ease, backdrop-filter 250ms ease;
 }
 
 .header.is-scrolled {
@@ -533,7 +533,7 @@ p {
   opacity: 0;
   pointer-events: none;
   transform: translateY(-8px);
-  transition: all 240ms ease;
+  transition: opacity 240ms ease, transform 240ms ease;
 }
 
 .mobile-drawer.is-open {
@@ -641,6 +641,7 @@ p {
   object-fit: cover;
   box-shadow: 0 30px 70px rgba(30, 52, 31, 0.2);
   animation: floatMedia 8s ease-in-out infinite;
+  will-change: transform;
 }
 
 @keyframes floatMedia {
@@ -663,6 +664,7 @@ p {
   font-size: 0.83rem;
   font-weight: 600;
   animation: floatTag 7s ease-in-out infinite;
+  will-change: transform;
 }
 
 @keyframes floatTag {
@@ -1022,6 +1024,7 @@ p {
   gap: 20px;
   width: max-content;
   animation: belt-scroll 28s linear infinite;
+  will-change: transform;
 }
 
 .belt-cards:has(.pay-card:hover) {
@@ -1196,7 +1199,7 @@ p {
   padding: 8px 12px;
   font-weight: 500;
   cursor: pointer;
-  transition: all 230ms ease;
+  transition: background-color 230ms ease, color 230ms ease, border-color 230ms ease;
 }
 
 .chip.is-active {
@@ -1213,6 +1216,7 @@ p {
   display: grid;
   gap: 12px;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  contain: layout style;
 }
 
 @media (min-width: 768px) {
@@ -1751,7 +1755,7 @@ p {
 }
 .checkout-submit-btn i { width: 16px; height: 16px; }
 
-#addressField { transition: all 200ms ease; }
+#addressField { transition: opacity 200ms ease; }
 
 .modal {
   border: 1px solid var(--line);
@@ -1991,7 +1995,7 @@ p {
   font-weight: 600;
   cursor: pointer;
   color: var(--text);
-  transition: all 180ms ease;
+  transition: border-color 180ms ease, background-color 180ms ease, color 180ms ease;
 }
 
 .modal-presets button:hover { border-color: var(--green); background: #eaf7ea; color: var(--green); }
@@ -2014,7 +2018,7 @@ p {
   font-size: 0.95rem;
   font-weight: 500;
   color: var(--text);
-  transition: all 180ms ease;
+  transition: border-color 180ms ease, background-color 180ms ease;
 }
 
 .modal-variant-btn.is-active { border-color: var(--green); background: #eaf7ea; }
@@ -2115,7 +2119,7 @@ p {
   border-radius: 12px;
   padding: 10px 14px;
   opacity: 0;
-  transition: all 220ms ease;
+  transition: opacity 220ms ease, transform 220ms ease;
   z-index: 80;
 }
 
@@ -2258,6 +2262,7 @@ p {
   gap: 14px;
   width: max-content;
   animation: testimonials-scroll 50s linear infinite;
+  will-change: transform;
 }
 
 .testimonials-track:hover {

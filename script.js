@@ -1011,12 +1011,33 @@ function getWhatsappMessage(formData) {
   const total = state.cart.reduce((sum, item) => sum + item.total, 0);
   const lines = state.cart
     .map((item) => `• ${item.name} — ${item.label} — ${formatMoney(item.total)}`)
-    .join("\n\n");
+    .join("\n");
 
   const delivery = formData.delivery || "Entrega a Domicilio";
-  const address = delivery === "Entrega a Domicilio" ? `\n📍 Direccion: ${formData.address || "Sin indicar"}` : "\n🏪 Retira en el local";
+  const sep = "━━━━━━━━━━━━━━━━━━━━━━";
+  const addressLine = delivery === "Entrega a Domicilio"
+    ? `\n\n📍 Dirección:\n${formData.address || "Sin indicar"}`
+    : "";
 
-  return `🛒 Nuevo pedido - Que Papa\n\n📦 Productos:\n\n${lines}\n\n💰 Total:\n${formatMoney(total)}\n\n👤 Cliente:\n${formData.name}\n\n📞 ${formData.phone}\n\n📧 ${formData.email}${address}\n\n💳 Pago: ${formData.payment}\n\n---\nMuchas gracias por elegir Que Papa 🍎🥬\nDe la tierra a tu hogar.`;
+  return (
+    `🛒 NUEVO PEDIDO - QUE PAPÁ\n\n` +
+    `${sep}\n\n` +
+    `👤 Cliente:\n${formData.name}\n\n` +
+    `📞 Teléfono:\n${formData.phone}\n\n` +
+    `📧 Correo:\n${formData.email}\n\n` +
+    `${sep}\n\n` +
+    `🚚 Método de entrega:\n${delivery}${addressLine}\n\n` +
+    `${sep}\n\n` +
+    `💳 Método de pago:\n${formData.payment}\n\n` +
+    `💰 Total aproximado:\n${formatMoney(total)}\n\n` +
+    `${sep}\n\n` +
+    `🥦 PRODUCTOS SOLICITADOS\n\n` +
+    `${lines}\n\n` +
+    `${sep}\n\n` +
+    `🕒 Pedido realizado desde la página web.\n\n` +
+    `🌱 Que Papá\n` +
+    `"De la Tierra a tu Hogar."`
+  );
 }
 
 function bindEvents() {
