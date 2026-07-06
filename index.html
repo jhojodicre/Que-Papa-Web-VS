@@ -281,18 +281,92 @@
         </div>
       </section>
 
-      <section class="section payments reveal reveal--up">
+      <section class="section payments payments-belt reveal reveal--up" id="pagos">
         <div class="section-head">
           <p class="tag">Medios de pago</p>
-          <h2>Paga como te resulte mas comodo</h2>
-          <p>Aceptamos todas las formas de pago electronicas y tarjetas.</p>
+          <h2>Elegí cómo querés pagar</h2>
+          <p>Aceptamos múltiples formas de pago para que tu compra sea rápida, cómoda y segura.</p>
         </div>
-        <div class="payments-grid">
-          <article><i data-lucide="wallet"></i><h3>Getnet</h3></article>
-          <article><i data-lucide="credit-card"></i><h3>Handy</h3></article>
-          <article><i data-lucide="badge-dollar-sign"></i><h3>Tarjetas de credito</h3></article>
-          <article><i data-lucide="landmark"></i><h3>Tarjetas de debito</h3></article>
-          <article><i data-lucide="smartphone"></i><h3>Pagos electronicos</h3></article>
+
+        <div class="belt-scene">
+          <div class="belt-cards-wrapper">
+            <div class="belt-cards">
+
+              <div class="pay-card">
+                <div class="pay-card__icon"><i data-lucide="credit-card"></i></div>
+                <h3>Getnet</h3>
+                <p>Terminal en el local</p>
+              </div>
+              <div class="pay-card">
+                <div class="pay-card__icon"><i data-lucide="smartphone"></i></div>
+                <h3>Handy</h3>
+                <p>App de pagos móvil</p>
+              </div>
+              <div class="pay-card">
+                <div class="pay-card__icon"><i data-lucide="badge-dollar-sign"></i></div>
+                <h3>Tarjetas de crédito</h3>
+                <p>Visa, Mastercard y más</p>
+              </div>
+              <div class="pay-card">
+                <div class="pay-card__icon"><i data-lucide="landmark"></i></div>
+                <h3>Tarjetas de débito</h3>
+                <p>Acceso directo a tu cuenta</p>
+              </div>
+              <div class="pay-card">
+                <div class="pay-card__icon"><i data-lucide="zap"></i></div>
+                <h3>Pagos electrónicos</h3>
+                <p>Transferencia inmediata</p>
+              </div>
+
+              <!-- Duplicados para loop infinito -->
+              <div class="pay-card" aria-hidden="true">
+                <div class="pay-card__icon"><i data-lucide="credit-card"></i></div>
+                <h3>Getnet</h3>
+                <p>Terminal en el local</p>
+              </div>
+              <div class="pay-card" aria-hidden="true">
+                <div class="pay-card__icon"><i data-lucide="smartphone"></i></div>
+                <h3>Handy</h3>
+                <p>App de pagos móvil</p>
+              </div>
+              <div class="pay-card" aria-hidden="true">
+                <div class="pay-card__icon"><i data-lucide="badge-dollar-sign"></i></div>
+                <h3>Tarjetas de crédito</h3>
+                <p>Visa, Mastercard y más</p>
+              </div>
+              <div class="pay-card" aria-hidden="true">
+                <div class="pay-card__icon"><i data-lucide="landmark"></i></div>
+                <h3>Tarjetas de débito</h3>
+                <p>Acceso directo a tu cuenta</p>
+              </div>
+              <div class="pay-card" aria-hidden="true">
+                <div class="pay-card__icon"><i data-lucide="zap"></i></div>
+                <h3>Pagos electrónicos</h3>
+                <p>Transferencia inmediata</p>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="belt-seal">
+            <i data-lucide="shield-check"></i>
+            <span>Pago seguro</span>
+          </div>
+        </div>
+
+        <div class="payments-trust">
+          <div class="trust-item">
+            <span class="trust-icon"><i data-lucide="shield"></i></span>
+            <strong>Compra protegida</strong>
+          </div>
+          <div class="trust-item">
+            <span class="trust-icon"><i data-lucide="zap"></i></span>
+            <strong>Cobro inmediato</strong>
+          </div>
+          <div class="trust-item">
+            <span class="trust-icon"><i data-lucide="receipt"></i></span>
+            <strong>Comprobante al instante</strong>
+          </div>
         </div>
       </section>
 
