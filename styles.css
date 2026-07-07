@@ -1763,6 +1763,8 @@ p {
   width: min(920px, 96vw);
   padding: 20px;
   box-shadow: 0 26px 60px rgba(0, 0, 0, 0.2);
+  max-height: 95vh;
+  overflow: hidden;
 }
 
 .modal::backdrop {
@@ -1784,8 +1786,8 @@ p {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0;
-  min-height: 500px;
-  max-height: 90vh;
+  min-height: 0;
+  max-height: calc(95vh - 40px);
   overflow: hidden;
 }
 
@@ -1819,15 +1821,18 @@ p {
   padding: 0;
   gap: 0;
   max-height: none;
+  min-height: 0;
 }
 
 .modal-detail__scroll {
   flex: 1;
   overflow-y: auto;
+  overflow-x: hidden;
   padding: 26px 24px 12px;
   display: flex;
   flex-direction: column;
   gap: 12px;
+  min-height: 0;
 }
 
 .modal-category-tag {
@@ -2035,6 +2040,7 @@ p {
   background: #fff;
   border-top: 1px solid var(--line);
   flex-shrink: 0;
+  flex-wrap: wrap;
 }
 
 .modal-subtotal__label {
@@ -2634,10 +2640,35 @@ p {
 @media (max-width: 1024px) {
   .hero,
   .contact,
-  .product-modal__grid,
   .experience-layout,
   .about-layout {
     grid-template-columns: 1fr;
+  }
+
+  /* Modal: single-column layout con flex para que el footer sea siempre visible */
+  .product-modal__grid {
+    display: flex;
+    flex-direction: column;
+    max-height: calc(96vh - 40px);
+    overflow: hidden;
+  }
+  .modal-img-col {
+    flex-shrink: 0;
+    max-height: 180px;
+    overflow: hidden;
+    border-radius: 12px 12px 0 0;
+    padding: 8px 16px;
+  }
+  .product-modal__grid > .modal-img-col img {
+    height: 160px;
+    max-height: 160px;
+    width: auto;
+    margin: 0 auto;
+  }
+  .modal-detail {
+    flex: 1;
+    min-height: 0;
+    border-radius: 0 0 12px 12px;
   }
 
   .hero__media img {
@@ -2791,10 +2822,37 @@ p {
     padding: 14px;
   }
   .product-modal__grid {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    max-height: calc(96vh - 28px);
+    overflow: hidden;
+  }
+  .modal-img-col {
+    flex-shrink: 0;
+    border-radius: 12px 12px 0 0;
+    padding: 16px;
   }
   .product-modal__grid img {
-    height: 220px;
+    height: 160px;
+    max-height: 160px;
+    width: auto;
+    margin: 0 auto;
+  }
+  .modal-detail {
+    flex: 1;
+    min-height: 0;
+    border-radius: 0 0 12px 12px;
+  }
+  .modal-detail__scroll {
+    padding: 16px 16px 8px;
+  }
+  .modal-footer {
+    padding: 12px 16px;
+  }
+  .modal-add-btn {
+    padding: 12px 16px;
+    font-size: 0.88rem;
+    flex: 1;
   }
 
   /* Catalog logo smaller */
