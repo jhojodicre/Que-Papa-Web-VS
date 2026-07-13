@@ -1822,6 +1822,13 @@ p {
   gap: 0;
   max-height: none;
   min-height: 0;
+  .modal-detail {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;   /* permite que el scroll funcione bien */
+}
+
 }
 
 .modal-detail__scroll {
@@ -1833,15 +1840,28 @@ p {
   flex-direction: column;
   gap: 12px;
   min-height: 0;
+  .modal-detail__scroll {
+  flex: 1;
+  overflow-y: auto;
+  padding: 26px 24px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 0;
+}
+
 }
 dialog.modal {
   width: 100%;
   max-width: 600px;
   max-height: 90vh;   /* limita la altura al 90% de la pantalla */
-  overflow-y: auto;   /* habilita scroll vertical */
+  display: flex;      /* lo convierte en contenedor flexible */
+  flex-direction: column; /* organiza contenido en columna */
+  overflow: hidden;   /* evita que se desborde */
   border: none;
   border-radius: 12px;
 }
+
 
 .modal-category-tag {
   display: inline-block;
@@ -2878,4 +2898,41 @@ dialog.modal {
     flex-wrap: wrap;
     gap: 8px;
   }
+  /* Contenedor principal del modal */
+dialog.modal {
+  width: 100%;
+  max-width: 600px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: none;
+  border-radius: 12px;
+}
+
+/* Panel derecho del modal */
+.modal-detail {
+  background: var(--beige);
+  display: flex;
+  flex-direction: column;
+  border-radius: 0 12px 12px 0; /* ajustá según mobile si querés */
+  overflow: hidden;
+  padding: 0;
+  gap: 0;
+  min-height: 0;
+  flex: 1;
+}
+
+/* Contenido scrolleable */
+.modal-detail__scroll {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 16px 16px 8px; /* o 26px 24px 12px, elegí uno */
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 0;
+}
+
 }
