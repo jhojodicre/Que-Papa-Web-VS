@@ -1834,6 +1834,14 @@ p {
   gap: 12px;
   min-height: 0;
 }
+dialog.modal {
+  width: 100%;
+  max-width: 600px;
+  max-height: 90vh;   /* limita la altura al 90% de la pantalla */
+  overflow-y: auto;   /* habilita scroll vertical */
+  border: none;
+  border-radius: 12px;
+}
 
 .modal-category-tag {
   display: inline-block;
