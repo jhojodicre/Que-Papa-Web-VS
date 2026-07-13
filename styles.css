@@ -2049,6 +2049,10 @@ dialog.modal {
   border-top: 1px solid var(--line);
   flex-shrink: 0;
   flex-wrap: wrap;
+  position: sticky;   /* se queda fijo dentro del modal */
+  bottom: 0;          /* pegado al borde inferior */
+  z-index: 10;        /* asegura que quede encima del contenido */
+
 }
 
 .modal-subtotal__label {
