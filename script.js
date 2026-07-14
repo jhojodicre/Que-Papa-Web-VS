@@ -1074,18 +1074,6 @@ function bindEvents() {
     });
   }
 
-  if (cartFab) cartFab.addEventListener("click", openCart);
-  const cartHeaderBtn = document.getElementById("cartHeaderBtn");
-  if (cartHeaderBtn) cartHeaderBtn.addEventListener("click", openCart);
-  if (closeCart) closeCart.addEventListener("click", closeCartPanel);
-
-  if (clearCart) {
-    clearCart.addEventListener("click", () => {
-      state.cart = [];
-      renderCart();
-    });
-  }
-
   // … resto de lógica de checkout
 
 
