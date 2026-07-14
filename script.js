@@ -561,7 +561,7 @@ function filteredProducts() {
 
   list.sort((a, b) => a.name.localeCompare(b.name, "es"));
 
-  return list;
+  return list;  
 }
 
 function renderCatalog() {
@@ -1049,7 +1049,14 @@ function bindEvents() {
   }
 
   if (closeProductModal && productModal) {
-    closeProductModal.addEventListener("click", () => productModal.close());
+    closeProductModal.addEventListener("click", () => {
+      productModal.close();
+      productModalContent.innerHTML = "";   // limpia la tarjeta completa
+      state.selectedQty = 0;                // resetea cantidad
+      state.selectedVariantKey = null;      // resetea variante
+      state.selectedUseOffer = false;       // resetea oferta
+    });
+
     productModal.addEventListener("click", (event) => {
       const rect = productModal.getBoundingClientRect();
       const isOutside =
@@ -1057,9 +1064,30 @@ function bindEvents() {
         event.clientX > rect.right ||
         event.clientY < rect.top ||
         event.clientY > rect.bottom;
-      if (isOutside) productModal.close();
+      if (isOutside) {
+        productModal.close();
+        productModalContent.innerHTML = "";   // también limpia si se cierra por click afuera
+        state.selectedQty = 0;
+        state.selectedVariantKey = null;
+        state.selectedUseOffer = false;
+      }
     });
   }
+
+  if (cartFab) cartFab.addEventListener("click", openCart);
+  const cartHeaderBtn = document.getElementById("cartHeaderBtn");
+  if (cartHeaderBtn) cartHeaderBtn.addEventListener("click", openCart);
+  if (closeCart) closeCart.addEventListener("click", closeCartPanel);
+
+  if (clearCart) {
+    clearCart.addEventListener("click", () => {
+      state.cart = [];
+      renderCart();
+    });
+  }
+
+  // … resto de lógica de checkout
+
 
   if (cartFab) cartFab.addEventListener("click", openCart);
   const cartHeaderBtn = document.getElementById("cartHeaderBtn");
