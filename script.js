@@ -586,6 +586,18 @@ function renderCatalog() {
   const list = filteredProducts();
   catalogCount.textContent = `${list.length} productos disponibles`;
 
+  if (list.length === 0) {
+    catalogGrid.innerHTML = `
+      <div class="catalog-empty">
+        <i data-lucide="search-x"></i>
+        <p class="catalog-empty__title">No encontramos productos</p>
+        <p class="catalog-empty__desc">Probá con otra palabra o revisá la ortografía.</p>
+      </div>
+    `;
+    if (window.lucide) window.lucide.createIcons();
+    return;
+  }
+
   catalogGrid.innerHTML = list
     .map(
       (product) => `
