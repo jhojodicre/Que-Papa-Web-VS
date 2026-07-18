@@ -922,9 +922,9 @@ function addCurrentProductToCart() {
     useOffer: state.selectedUseOffer,
   };
 
-  state.cart.push(cartItem);
+  javascriptstate.cart.push(cartItem);
   renderCart();
-  if (productModal) productModal.close();
+  if (productModal) closeProductModalAndReset();
   showToast("Producto agregado.");
 }
 
@@ -1040,6 +1040,16 @@ function getWhatsappMessage(formData) {
   );
 }
 
+// Cierra el modal de producto y resetea todo el estado seleccionado.
+// La usan: la X, el clic afuera del modal, y "Agregar al carrito".
+function closeProductModalAndReset() {
+  productModal.close();
+  productModalContent.innerHTML = "";
+  state.selectedQty = 0;
+  state.selectedVariantKey = null;
+  state.selectedUseOffer = false;
+}
+
 function bindEvents() {
   if (searchInput) {
     searchInput.addEventListener("input", () => {
@@ -1050,11 +1060,7 @@ function bindEvents() {
 
   if (closeProductModal && productModal) {
     closeProductModal.addEventListener("click", () => {
-      productModal.close();
-      productModalContent.innerHTML = "";   // limpia la tarjeta completa
-      state.selectedQty = 0;                // resetea cantidad
-      state.selectedVariantKey = null;      // resetea variante
-      state.selectedUseOffer = false;       // resetea oferta
+      closeProductModalAndReset();
     });
 
     productModal.addEventListener("click", (event) => {
@@ -1065,11 +1071,7 @@ function bindEvents() {
         event.clientY < rect.top ||
         event.clientY > rect.bottom;
       if (isOutside) {
-        productModal.close();
-        productModalContent.innerHTML = "";   // también limpia si se cierra por click afuera
-        state.selectedQty = 0;
-        state.selectedVariantKey = null;
-        state.selectedUseOffer = false;
+        closeProductModalAndReset();
       }
     });
   }
