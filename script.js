@@ -1146,25 +1146,24 @@ function bindEvents() {
   if (backToCart2) backToCart2.addEventListener("click", showCart);
   if (closeCheckoutPanel) closeCheckoutPanel.addEventListener("click", () => { closeCartPanel(); showCart(); });
 
-  // Show/hide address field based on delivery radio
-  document.querySelectorAll("input[name='delivery']").forEach((radio) => {
-    radio.addEventListener("change", () => {
-      if (addressField) {
-        addressField.style.display = radio.value === "Entrega a Domicilio" ? "" : "none";
-      }
-    });
-  });
-
   // Submit via external button
   if (checkoutSubmitBtn && checkoutForm) {
     checkoutSubmitBtn.addEventListener("click", () => checkoutForm.requestSubmit());
   }
-
-  if (checkoutForm) {
+   if (checkoutForm) {
     checkoutForm.addEventListener("submit", (event) => {
       event.preventDefault();
       if (state.cart.length === 0) return;
+
       const formData = Object.fromEntries(new FormData(checkoutForm));
+
+      // Si eligió domicilio, la dirección es obligatoria
+      if (formData.delivery === "Entrega a Domicilio" && !formData.address.trim()) {
+        showToast("Ingresá tu dirección de entrega.");
+        document.getElementById("inputAddress").focus();
+        return;
+      }
+
       const text = getWhatsappMessage(formData);
       const whatsappURL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
       window.open(whatsappURL, "_blank", "noopener,noreferrer");
@@ -1175,6 +1174,20 @@ function bindEvents() {
       renderCart();
     });
   }
+
+  // Muestra/oculta el campo dirección según el método de entrega elegido
+  const deliveryRadios = document.querySelectorAll('input[name="delivery"]');
+  const inputAddress = document.getElementById("inputAddress");
+
+  function updateAddressField() {
+    const selected = document.querySelector('input[name="delivery"]:checked');
+    const isDelivery = selected && selected.value === "Entrega a Domicilio";
+    if (addressField) addressField.style.display = isDelivery ? "" : "none";
+    if (!isDelivery && inputAddress) inputAddress.value = ""; // limpia si cambia a retiro
+  }
+
+  deliveryRadios.forEach((radio) => radio.addEventListener("change", updateAddressField));
+  updateAddressField(); // estado inicial al cargar la página
 
   if (header) {
     window.addEventListener("scroll", () => {
