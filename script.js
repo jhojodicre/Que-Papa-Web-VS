@@ -922,7 +922,7 @@ function addCurrentProductToCart() {
     useOffer: state.selectedUseOffer,
   };
 
-  javascriptstate.cart.push(cartItem);
+  state.cart.push(cartItem);
   renderCart();
   if (productModal) closeProductModalAndReset();
   showToast("Producto agregado.");
