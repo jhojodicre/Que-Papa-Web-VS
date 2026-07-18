@@ -1956,6 +1956,7 @@ dialog.modal {
   border: 1px solid var(--line);
   border-radius: 16px;
   overflow: hidden;
+  flex-shrink: 0;
 }
 
 .modal-qty-btn {
