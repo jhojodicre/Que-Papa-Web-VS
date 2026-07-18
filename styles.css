@@ -1851,7 +1851,7 @@ p {
 }
 
 }
-dialog.modal {
+dialog.modal[open] {
   width: 100%;
   max-width: 600px;
   max-height: 90vh;   /* limita la altura al 90% de la pantalla */
