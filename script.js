@@ -88,7 +88,7 @@ const products = [
     unitLabel: "unidad",
     price: 139,
     image: "img/berro.jpeg",
-    desc: "Berro fresco, ideal para ensaladas.",
+    desc: "Berro fresco ideal para ensaladas.",
     searchTerms: ["berro"],
   },
   {
